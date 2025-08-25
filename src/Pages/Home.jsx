@@ -11,7 +11,7 @@ export default function Home() {
   };
 
   return (
-    <div className='text-center'>
+    <div className='text-center sm:w-[100%]'>
       <div>
 
         <div className='flex md:flex-col sm:flex-col lg:flex-col justify-center items-center'>

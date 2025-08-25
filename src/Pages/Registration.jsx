@@ -78,7 +78,7 @@ export default function Registration() {
                         <div>
                             Already have an account?
                         </div>
-                        <Link to='/login' className='text-blue-500 pr-2.5 hover:text-blue-700'>Login</Link>
+                        <Link to='/' className='text-blue-500 pr-2.5 hover:text-blue-700'>Login</Link>
                     </div>
                 </form>
 
