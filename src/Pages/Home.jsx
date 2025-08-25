@@ -17,7 +17,9 @@ export default function Home() {
         <div className='flex md:flex-col sm:flex-col lg:flex-col justify-center items-center'>
             <img src={rose} className='w-lg'/>
             <h1 className='text-5xl  text-black font-bold'>
-            Welcome, {user?.name}
+            Welcome, <div className='capitalize'>
+              {user?.name}
+            </div>
         </h1>
         </div>
         <button
