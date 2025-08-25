@@ -11,7 +11,7 @@ export default function Home() {
   };
 
   return (
-    <div className='text-center sm:w-[100%]'>
+    <div className='text-center sm:w-[100%] h-screen w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 flex items-center justify-center'>
       <div>
 
         <div className='flex md:flex-col sm:flex-col lg:flex-col justify-center items-center'>
