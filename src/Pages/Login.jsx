@@ -21,7 +21,7 @@ export default function Login() {
   };
 
     return (
-        <div className=' h-screen w-full  bg-cover bg-center  ' style={{ backgroundImage: `url(${img})` }}>
+        <div className=' h-screen w-full  bg-cover bg-center  sm:w-[100%]' style={{ backgroundImage: `url(${img})` }} >
             <div className=' '>
                 <div className='text-7xl text-white font-medium text-center md:text-center lg:mr-[80px] sm:text-center sm:p-20 p-20 md:mr-2.5'>
                     Login
@@ -31,10 +31,10 @@ export default function Login() {
                     onSubmit={handleLogin}
                     method="post"
                     className="
-    flex flex-col border-2 border-white justify-center items-center  
-    rounded-xl bg-blue-50 p-6 sm:p-10 w-[90%] max-w-md mx-auto
-    sm:relative sm:mt-[30px] lg:mr-[500px] lg:ml-[500px]
-    fixed inset-0 sm:inset-auto shadow-lg shadow-blue-500 
+   flex flex-col border-2 border-white justify-center items-center  
+    rounded-xl bg-blue-50 p-6 sm:p-8 w-[90%] max-w-md mx-auto
+    mt-10 shadow-lg shadow-blue-500 
+    lg:mt-[50px] lg:mr-[500px] lg:ml-[500px]
   "
                 >
                     <div className="flex flex-col w-full">
@@ -66,12 +66,7 @@ export default function Login() {
                     </div>
                 </form>
 
-                <div>
-                    <div>
-                        Don’t have an account? <pre> </pre>
-                    </div>
-                    <Link to='/register' >Register</Link>
-                </div>
+               
 
 
 

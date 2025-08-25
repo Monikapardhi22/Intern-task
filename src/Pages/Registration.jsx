@@ -34,10 +34,10 @@ export default function Registration() {
                 onSubmit={handleRegister}
                     method="post"
                     className="
-    flex flex-col border-2 border-white justify-center items-center  
-    rounded-xl bg-blue-50  p-10 md:w-[90%] lg:w-[90%] sm:w-[90%] sm:p-6 max-w-md mx-auto
-    sm:relative sm:mt-[0px] lg:mr-[500px] lg:ml-[500px] 
-    fixed inset-0 sm:inset-auto shadow-lg shadow-blue-500 
+   flex flex-col border-2 border-white justify-center items-center  
+    rounded-xl bg-blue-50 p-6 sm:p-8 w-[90%] max-w-md mx-auto
+    mt-10 shadow-lg shadow-blue-500 
+    lg:mt-[50px] lg:mr-[500px] lg:ml-[500px]
   "
                 >
                     <div className="flex flex-col w-full">
