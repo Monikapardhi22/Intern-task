@@ -57,7 +57,7 @@ export default function Registration() {
           Registration
         </div>
 
-        {/* Name */}
+        
         <div className="flex flex-col w-full">
           <label className="text-lg font-sans mb-2 text-white">Name</label>
           <input
@@ -68,7 +68,7 @@ export default function Registration() {
           />
         </div>
 
-        {/* Email */}
+       
         <div className="flex flex-col w-full mt-3">
           <label className="text-lg font-sans mb-2 text-white">Email</label>
           <input
@@ -79,7 +79,7 @@ export default function Registration() {
           />
         </div>
 
-        {/* Password */}
+
         <div className="flex flex-col w-full mt-3">
           <label className="text-lg font-sans mb-2 text-white">Password</label>
           <input
@@ -91,7 +91,7 @@ export default function Registration() {
           {passwordError && <p className="text-red-300 text-sm">{passwordError}</p>}
         </div>
 
-        {/* Confirm Password */}
+  
         <div className="flex flex-col w-full mt-3">
           <label className="text-lg font-sans mb-2 text-white">Confirm Password</label>
           <input
@@ -103,17 +103,17 @@ export default function Registration() {
           {confirmError && <p className="text-red-300 text-sm">{confirmError}</p>}
         </div>
 
-        {/* General Error */}
+      
         {error && <p className="text-red-300 text-sm mb-3">{error}</p>}
 
-        {/* Submit Button */}
+     
         <button
           className="sm:w-[180px] md:w-[180px] p-2 bg-blue-500 mt-5 rounded-md text-lg font-semibold text-white hover:bg-white hover:text-blue-500 transition"
         >
           Register
         </button>
 
-        {/* Already Registered */}
+       
         <div className="flex flex-row m-3 text-white">
           <span>Already have an account?</span>
           <Link to="/login" className="text-yellow-300 pl-2 hover:text-yellow-500">

@@ -3,8 +3,9 @@ import { Route, Routes, Navigate, useNavigate, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import Registration from "./Pages/Registration";
 
+
 export default function App() {
-  // 🔹 States for Login
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -14,7 +15,7 @@ export default function App() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // ✅ Password validation
+    //  validation
     if (!password) {
       setPasswordError("Password is required");
       return;
@@ -25,7 +26,7 @@ export default function App() {
       setPasswordError("");
     }
 
-    // ✅ Check user in localStorage
+   
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (
       storedUser &&
@@ -39,7 +40,7 @@ export default function App() {
     }
   };
 
-  // 🔹 Login Component defined inside App.jsx
+  // 🔹 Login Component 
    const Login = () => (
     <div className="h-screen w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 flex items-center justify-center">
       <form
@@ -56,7 +57,7 @@ export default function App() {
           type="email"
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
-          className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600 mb-5"
+          className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600 mb-4"
         /></div>
 
         {/* Password */}
@@ -91,7 +92,7 @@ export default function App() {
     <div>
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
-        <Route path="/login" element={<Login />} /> {/* ✅ Login defined here */}
+        <Route path="/login" element={<Login />} /> 
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Registration />} />
       </Routes>
