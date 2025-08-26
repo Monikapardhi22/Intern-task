@@ -88,7 +88,7 @@ export default function App() {
                 <button
                   type="button"
                   onClick={handleLogin}
-                  className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:text-white transition"
+                  className="sm:w-[380px] lg:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:text-white transition"
                 >
                   Login
                 </button>

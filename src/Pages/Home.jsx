@@ -12,17 +12,18 @@ export default function Home() {
   };
 
   return (
-    <div className='text-center sm:w-[100%] h-screen w-full flex items-center justify-center'>
-      <div>
+    <div className='text-center sm:w-[100%] h-screen w-full flex items-center justify-center sm:flex sm:flex-col'>
+      <div className='sm:flex sm:flex-col sm:justify-center sm:items-center '>
 
         <div className='flex md:flex-col sm:flex-col lg:flex-col justify-center items-center'>
             <img src={rose} className='w-7'/>
-            <h1 className='text-4xl  text-black font-bold'>
+            
+        </div>
+        <h1 className='text-4xl  text-black font-bold'>
             Welcome, <div className='capitalize'>
               {user?.name}
             </div>
         </h1>
-        </div>
         <button
           onClick={handleLogout}
           className=" bg-blue-400 border-2 cursor-pointer border-blue-400 p-2  w-[180px] text-lg rounded-lg text-center hover:bg-blue-200 hover:border-blue-700 hover:border-2 transition mt-9"
