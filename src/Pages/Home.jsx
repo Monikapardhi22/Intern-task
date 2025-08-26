@@ -8,6 +8,7 @@ export default function Home() {
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     navigate("/login");
+    
   };
 
   return (
