@@ -46,32 +46,38 @@ export default function App() {
         <Route
           path="/login"
           element={
-            <div className="h-screen w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 flex items-center justify-center">
-              <div
-                className="flex flex-col border border-white/40 justify-center items-center  
-                  rounded-xl bg-white/20 backdrop-blur-md p-6 sm:p-8 w-[90%] max-w-md
-                  shadow-lg shadow-black/30"
-              >
-                <h2 className="text-4xl text-white font-bold text-center mb-6 drop-shadow-lg">
-                  Login
+            <div className="h-screen w-full bg-gradient-to-r flex flex-col items-center justify-center">
+              <div>
+                  <h2 className="text-2xl text-black text-center font-semibold mb-6 drop-shadow-lg">
+                  <a href="#" >Sign in </a>
+                </h2>
+                <h2 className="text-lg text-gray-400  mb-6 ">
+                 Enter your details below
                 </h2>
 
+                </div> 
+              <div
+                className="flex flex-col  justify-center items-center  
+                  rounded-xl  p-6 sm:p-8 w-[90%] max-w-md
+                  "
+              >
+                
                 {/* Email */}
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600 mb-4 w-full"
+                  className=" rounded-md   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-9 "
                 />
-
+{error && <p className="text-red-500 text-sm mb-3">{error}</p>}
                 {/* Password */}
                 <input
                   type="password"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600 w-full"
+                  className=" rounded-md  py-3.5 p-3 border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg  w-full"
                 />
 
                 {passwordError && (
@@ -82,16 +88,16 @@ export default function App() {
                 <button
                   type="button"
                   onClick={handleLogin}
-                  className="sm:w-[180px] md:w-[180px] p-2 bg-blue-500 mt-5 rounded-md text-lg font-semibold text-white hover:bg-white hover:text-blue-500 transition"
+                  className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:text-white transition"
                 >
                   Login
                 </button>
 
-                <p className="flex flex-row m-3 text-white">
+                <p className="flex flex-row m-4 text-black text-lg font-medium">
                   Don’t have an account?{" "}
                   <Link
                     to="/register"
-                    className="text-yellow-300 pl-2 hover:text-yellow-500"
+                    className="text-blue-400 pl-2 text-lg font-medium hover:text-blue-800"
                   >
                     Register
                   </Link>

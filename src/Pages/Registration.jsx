@@ -45,59 +45,60 @@ export default function Registration() {
 
   return (
     <div 
-      className="h-screen w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 flex items-center justify-center"
+      className="h-screen w-full  flex items-center justify-center  flex-col"
     >
-      <form
-        onSubmit={handleRegister}
-        className="flex flex-col border border-white/40 justify-center items-center  
-          rounded-xl bg-white/20 backdrop-blur-md p-6 sm:p-8 w-[90%] max-w-md
-          shadow-lg shadow-black/30"
-      >
-        <div className="text-4xl text-white font-bold text-center mb-6 drop-shadow-lg">
+      <div className="text-2xl text-black text-center font-semibold mt-6 drop-shadow-lg">
           Registration
         </div>
+      <form
+        onSubmit={handleRegister}
+        className="flex flex-col   justify-center items-center  
+            p-6 sm:p-8 w-[90%] max-w-md
+          shadow-black/30"
+      >
+        
 
         
         <div className="flex flex-col w-full">
-          <label className="text-lg font-sans mb-2 text-white">Name</label>
+          {/* <label className="text-lg font-sans mb- text-white">Name</label> */}
           <input
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600 capitalize"
+            className="rounded-md   py-3.5 p-3  capitalize mb-4 border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full "
             placeholder="Enter your name"
           />
         </div>
 
        
-        <div className="flex flex-col w-full mt-3">
-          <label className="text-lg font-sans mb-2 text-white">Email</label>
+        <div className="flex flex-col w-full mt-1 mb-1.5  ">
+          {/* <label className="text-lg font-sans mb-1 text-white">Email</label> */}
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600"
+            className="rounded-md   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-3 "
             placeholder="Enter your email"
           />
         </div>
 
 
-        <div className="flex flex-col w-full mt-3">
-          <label className="text-lg font-sans mb-2 text-white">Password</label>
+        <div className="flex flex-col w-full mt-1  mb-2">
+          {/* <label className="text-lg font-sans mb- text-white">Password</label> */}
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600"
+            className="rounded-md   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-1"
             placeholder="Enter password"
           />
           {passwordError && <p className="text-red-300 text-sm">{passwordError}</p>}
         </div>
 
   
-        <div className="flex flex-col w-full mt-3">
-          <label className="text-lg font-sans mb-2 text-white">Confirm Password</label>
+        <div className="flex flex-col w-full mt-1 mb-2">
+          {/* <label className="text-lg font-sans mb-2 text-white">Confirm Password</label> */}
           <input
             onChange={(e) => setConfirm(e.target.value)}
             type="password"
-            className="border border-white/50 rounded-md px-3 py-2 bg-white/30 text-black placeholder-gray-600"
+            className="rounded-md   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb- "
             placeholder="Re-enter password"
           />
           {confirmError && <p className="text-red-300 text-sm">{confirmError}</p>}
@@ -108,15 +109,15 @@ export default function Registration() {
 
      
         <button
-          className="sm:w-[180px] md:w-[180px] p-2 bg-blue-500 mt-5 rounded-md text-lg font-semibold text-white hover:bg-white hover:text-blue-500 transition"
+          className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:text-white transition"
         >
           Register
         </button>
 
        
-        <div className="flex flex-row m-3 text-white">
+        <div className="flex flex-row m-4 text-black text-lg font-medium">
           <span>Already have an account?</span>
-          <Link to="/login" className="text-yellow-300 pl-2 hover:text-yellow-500">
+          <Link to="/login" className="text-blue-400 pl-2 text-lg font-medium hover:text-blue-800">
             Login
           </Link>
         </div>

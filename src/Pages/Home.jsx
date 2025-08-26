@@ -12,12 +12,12 @@ export default function Home() {
   };
 
   return (
-    <div className='text-center sm:w-[100%] h-screen w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 flex items-center justify-center'>
+    <div className='text-center sm:w-[100%] h-screen w-full flex items-center justify-center'>
       <div>
 
         <div className='flex md:flex-col sm:flex-col lg:flex-col justify-center items-center'>
-            <img src={rose} className='w-lg'/>
-            <h1 className='text-5xl  text-black font-bold'>
+            <img src={rose} className='w-7'/>
+            <h1 className='text-4xl  text-black font-bold'>
             Welcome, <div className='capitalize'>
               {user?.name}
             </div>
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <button
           onClick={handleLogout}
-          className=" bg-purple-300 px-6 py-3 text-lg rounded-lg text-center hover:bg-red-400 transition mt-9"
+          className=" bg-blue-400 border-2 cursor-pointer border-blue-400 p-2  w-[180px] text-lg rounded-lg text-center hover:bg-blue-200 hover:border-blue-700 hover:border-2 transition mt-9"
         >
           Logout
         </button>
