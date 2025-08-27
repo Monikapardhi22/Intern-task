@@ -77,7 +77,7 @@ export default function App() {
                 </div> 
               <div
                 className="flex flex-col  justify-center items-center  
-                  rounded-xl  p-6 sm:p-8 w-[90%] max-w-md
+                  rounded-xl  p-6 sm:p-8 w-[90%] 
                   "
               >
                 
@@ -112,11 +112,11 @@ export default function App() {
                   Login
                 </button>
 
-                <p className="flex flex-row m-4 text-black text-lg font-medium">
+                <p className="flex flex-row m-4 text-black text-lg font-medium max-w-[380px]">
                   Don’t have an account?{" "}
                   <Link
                     to="/register"
-                    className="text-blue-400 pl-2 text-lg font-medium hover:text-blue-800"
+                    className="text-blue-400 pl-2 text-lg font-medium hover:text-blue-800  "
                   >
                     Register
                   </Link>
