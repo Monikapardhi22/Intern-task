@@ -64,7 +64,7 @@ export default function Registration() {
           <input
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="rounded-md   py-3.5 p-3  capitalize mb-4 border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full "
+            className="rounded-md focus:border-blue-500   py-3.5 p-3  capitalize mb-4 border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Enter your name"
           />
         </div>
@@ -75,7 +75,7 @@ export default function Registration() {
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="rounded-md   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-3 "
+            className="rounded-md  focus:border-blue-500   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-3 hover:border-blue-500 outline-none "
             placeholder="Enter your email"
           />
         </div>
@@ -86,7 +86,7 @@ export default function Registration() {
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            className="rounded-md   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-1"
+            className="rounded-md focus:border-blue-500   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-1 hover:border-blue-500 outline-none "
             placeholder="Enter password"
           />
           {passwordError && <p className="text-red-300 text-sm">{passwordError}</p>}
@@ -98,7 +98,7 @@ export default function Registration() {
           <input
             onChange={(e) => setConfirm(e.target.value)}
             type="password"
-            className="rounded-md   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb- "
+            className="rounded-md focus:border-blue-500   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Re-enter password"
           />
           {confirmError && <p className="text-red-300 text-sm">{confirmError}</p>}
@@ -109,7 +109,7 @@ export default function Registration() {
 
      
         <button
-          className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:text-white transition"
+          className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:border-blue-500 outline-none  hover:text-white transition"
         >
           Register
         </button>
