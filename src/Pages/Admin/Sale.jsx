@@ -143,7 +143,7 @@ export default function Sale() {
                                     />
 
                                 </div>
-                                <div className='border border-gray-400 sm:p-2 sm:px-9 p-2 m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
+                                <div className='border border-gray-400 sm:p-2 sm:px-9 p-2 sm:m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
                                     <select
 
 
