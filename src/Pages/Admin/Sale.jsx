@@ -8,10 +8,13 @@ import logo from "../../assets/logo.png";
 import logout from "../../assets/logout.jpg";
 import layer from "../../assets/layers.png"
 import razo from "../../assets/razorpe.png"
+import chart from "../../assets/chart.jpg"
+import Try from './Try';
 
 
 export default function Sale() {
     const [open, setOpen] = useState(false);
+    const [showLink, setShowLink] = useState(false);
     const [flipped, setFlipped] = useState(false);
     const navigate = useNavigate();
 
@@ -28,7 +31,7 @@ export default function Sale() {
 
                         <div className="">
                             <Link to="/">
-                                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px]" />
+                                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
                             </Link>
 
 
@@ -43,12 +46,46 @@ export default function Sale() {
                                         <i class="fa-solid fa-grip"></i>Dashboard
                                     </Link>
                                 </li>
+ <li className="cursor-pointer">
+  {/* Configuration Button */}
+  <div
+    onClick={() => setShowLink(!showLink)}
+    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+  >
+    <i className="fa-solid fa-screwdriver-wrench"></i>
+    <span>Configuration</span>
+  </div>
 
-                                <li>
-                                    <Link to="/features" className="transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                     
-                                    </Link>
-                                </li>
+  {/* Dropdown Links */}
+  {showLink && (
+    <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
+      <li>
+        <Link
+          to="/Server"
+          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+        >
+          ⋆Service
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/machine"
+          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+        >
+          ⋆Machine
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/log"
+          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+        >
+          ⋆Logs
+        </Link>
+      </li>
+    </ul>
+  )}
+</li>
                                 <li>
                                     <Link to="/contact" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
 
@@ -74,7 +111,7 @@ export default function Sale() {
                                 </h1>
 
                             </div>
-                            <div className='border border-white shadow-lg rounded-md sm:flex sm:items-center sm:justify-around  '>
+                            <div className='border border-white shadow-lg rounded-md sm:flex sm:items-center sm:justify-around flex justify-center items-center  '>
                                 <div className='m-5 mr-12' >
                                     <select className='border-2 border-black hover:border-2 hover:border-blue-600 p-3 focus:border-blue-600 rounded-lg sm:w-[300px] py-3 '  >
                                         <option value="" className='disabled hidden text-5xl'>
@@ -98,15 +135,15 @@ export default function Sale() {
                                     <img src={sales} className='h-[200px] w-[200px]   ' />
                                 </motion.div>
                             </div>
-                            <div className='border border-white shadow-md rounded-md mt-4 flex justify-around items-center '>
+                            <div className='border border-white shadow-md rounded-md mt-4 sm:flex sm:justify-around sm:items-center flex justify-between items-center '>
                                 <div>
                                     <input
                                         type="date"
-                                        className="border border-gray-400 p-2 px-9 m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg"
+                                        className="border border-gray-400 sm:p-2 sm:px-9 m-5 p-2 focus:border-blue-500 hover:border-blue-600 rounded-lg"
                                     />
 
                                 </div>
-                                <div className='border border-gray-400 p-2 px-9 m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
+                                <div className='border border-gray-400 sm:p-2 sm:px-9 p-2 m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
                                     <select
 
 
@@ -125,11 +162,11 @@ export default function Sale() {
 
                             </div>
 
-                            <div className='border border-white shadow-md rounded-md mt-4 flex justify-around items-center '>
-                                <div className='flex sm:flex  lg:flex sm:flex-wrap sm:flex-row'>
+                            <div className='border border-white shadow-md rounded-md mt-4 sm:flex sm:justify-around sm:items-center flex flex-col '>
+                                <div className='flex sm:flex  lg:flex sm:flex-wrap sm:flex-row flex-col justify-center items-center'>
                                     <div className=' '>
                                         <motion.div
-                                            className="w-56 h-[200px] cursor-pointer [perspective:700px]"
+                                            className="w-56 sm:h-[200px] h-[150px] cursor-pointer [perspective:700px]"
                                             onClick={() => setFlipped(!flipped)}
                                         >
                                             <motion.div
@@ -159,7 +196,7 @@ export default function Sale() {
                                     </div>
                                     <div>
                                         <motion.div
-                                            className="w-56 h-[200px] cursor-pointer [perspective:1000px]"
+                                            className="w-56 sm:h-[200px] h-[150px] cursor-pointer [perspective:1000px]"
                                             onClick={() => setFlipped(!flipped)}
                                         >
                                             <motion.div
@@ -189,7 +226,7 @@ export default function Sale() {
                                     </div>
                                     <div className=' '>
                                         <motion.div
-                                            className="w-56 h-[200px] cursor-pointer [perspective:700px]"
+                                            className="w-56 sm:h-[200px] h-[150px] cursor-pointer [perspective:700px]"
                                             onClick={() => setFlipped(!flipped)}
                                         >
                                             <motion.div
@@ -201,7 +238,7 @@ export default function Sale() {
 
                                                 <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
                                                     <img src={layer} className='w-14 mr-5' /><div className='mr-6'>
-                                                         VendT3
+                                                        VendT3
                                                     </div>
                                                 </div>
 
@@ -221,7 +258,7 @@ export default function Sale() {
                                     </div>
                                     <div className=' '>
                                         <motion.div
-                                            className="w-56 h-[200px] cursor-pointer [perspective:700px]"
+                                            className="w-56 sm:h-[200px] h-[150px] cursor-pointer [perspective:700px]"
                                             onClick={() => setFlipped(!flipped)}
                                         >
                                             <motion.div
@@ -234,7 +271,7 @@ export default function Sale() {
                                                 <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
                                                     <img src={layer} className='w-14 mr-3.5' />
                                                     <div className='mr-4'>
-                                                       Cosmetic
+                                                        Cosmetic
                                                     </div>
                                                 </div>
 
@@ -254,95 +291,107 @@ export default function Sale() {
                                     </div>
 
                                 </div>
-                                
+
                             </div>
                             <div className='m-5'>
-                                    <div className='text-2xl font-semibold'>
-                                        Business Analysis
-                                    </div>
-                                    <div className='flex  sm:flex sm:flex-wrap mt-3.5  lg:ml-5  '>
-                                        <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                            <div className='text-[16px] text-gray-500'>
-                                                Transaction amount/number of transactions
+                                <div className='text-2xl font-semibold'>
+                                    Business Analysis
+                                </div>
+                                <div className='flex  sm:flex sm:flex-wrap mt-3.5  lg:ml-5  flex-col '>
+                                    <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
+                                        <div className='text-[16px] text-gray-500'>
+                                            Transaction amount/number of transactions
 
-                                            </div>
-                                            <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
-                                                ₹0.00|0<div className='text-[11px] font-light'>
-                                                    Trx
-                                                </div>
-                                            </div>
-                                            
-                                            
                                         </div>
-                                        <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                            <div className='text-[16px] text-gray-500'>
-                                                Refund amount/number of refunds
-
+                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                            ₹0.00|0<div className='text-[11px] font-light'>
+                                                Trx
                                             </div>
-                                            <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
-                                                ₹0.00|0<div className='text-[11px] font-light'>
-                                                    Trx
-                                                </div>
-                                            </div>
-                                            </div>
-                                             <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                            <div className='text-[16px] text-gray-500'>
-                                                Refund rate
-
-                                            </div>
-                                            <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
-                                                0.00%
-                                            </div>
-                                            </div>
-                                             <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                            <div className='text-[16px] text-gray-500'>
-                                                Transaction value/number of transactions
-
-                                            </div>
-                                            <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
-                                                ₹0.00|0<div className='text-[11px] font-light'>
-                                                    Trx
-                                                </div>
-                                            </div>
-                                            </div>
-                                            
-                                            
+                                        </div>
 
 
-                                        
                                     </div>
-                                    <div className=' border rounded-md mt-4 flex  flex-col justify-around items-center shadow-lg border-white '>
-                                                <div className='text-2xl font-semibold'>
-                                                    Top Payment Method 
-                                                </div>
-                                                <div >
-                                                    <table className='sm:w-full lg:w-[1000px] mt-3   ' >
-                                                        <thead className='bg-blue-400  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
-                                                            <tr>
-                                                                <th>Name </th>
-                                                                <th>Amount</th>
-                                                                <th>Transactions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody className='sm:w-full lg:w-full  '>
-                                                            <tr>
-                                                                <td className='flex  justify-center items-center'>
-                                                                    <img src={razo}  className='w-[50px] h-[40px]'/>Razorpay
-                                                                </td>
-                                                                <td className='pl-64'>0</td>
-                                                                <td className='pl-28'
-                                                                >0</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                    <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
+                                        <div className='text-[16px] text-gray-500'>
+                                            Refund amount/number of refunds
+
+                                        </div>
+                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                            ₹0.00|0<div className='text-[11px] font-light'>
+                                                Trx
                                             </div>
-                                            <div>
-                                                <h1>
+                                        </div>
+                                    </div>
+                                    <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
+                                        <div className='text-[16px] text-gray-500'>
+                                            Refund rate
+
+                                        </div>
+                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                            0.00%
+                                        </div>
+                                    </div>
+                                    <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
+                                        <div className='text-[16px] text-gray-500'>
+                                            Transaction value/number of transactions
+
+                                        </div>
+                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                            ₹0.00|0<div className='text-[11px] font-light'>
+                                                Trx
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+                                <div>
+                                    <img src={chart} />
+                                </div>
+                                <div className=' border rounded-md mt-4 flex  flex-col justify-around items-center shadow-lg border-white '>
+                                    <div className='text-2xl font-semibold'>
+                                        Top Payment Method
+                                    </div>
+                                    <div className=' ' >
+                                        <table className='sm:w-full lg:w-[1000px] mt-3   ' >
+                                            <thead className='bg-blue-400  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
+                                                <tr>
+                                                    <th>Name </th>
+                                                    <th>Amount</th>
+                                                    <th>Transactions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className='sm:w-full lg:w-full text-center  '>
+                                                <tr>
+                                                    <td className='sm:flex  sm:justify-center sm:items-center flex justify-center items-center'>
+                                                        <img src={razo} className='w-[50px] h-[40px]' />Razorpay
+                                                    </td>
+                                                    <td className='sm:pl-64'>0</td>
+                                                    <td className='sm:pl-28 '
+                                                    >0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div className='mt-6 h-full'>
+                                    {/* <select className='w-full border  p-2.5 shadow bg-white rounded-md focus:border-blue-300'>
+                                                <option value=""> <h1 className='text-2xl font-semibold'>
                                                     Transition
                                                 </h1>
-                                            </div>
+
+                                                
+                                                
+                                                </option>
+                                                <option value={<input type='search' placeholder='search'/>}><input type='search' placeholder='search'/></option>
+                                               
+                                               </select> */}
+                                    <Try />
                                 </div>
+                            </div>
 
                         </div>
 
@@ -382,13 +431,23 @@ export default function Sale() {
                             </li>
 
                             <li>
-                                <Link to="/services" onClick={() => setOpen(false)}>
-                                    
+                                <Link to="/server" onClick={() => setOpen(false)}>
+                                    ⋆Server
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/machine" onClick={() => setOpen(false)}>
+                                    ⋆Machine
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/log" onClick={() => setOpen(false)}>
+                                    ⋆Logs
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/contact" onClick={() => setOpen(false)}>
-                                   
+
                                 </Link>
                             </li>
                             <li>

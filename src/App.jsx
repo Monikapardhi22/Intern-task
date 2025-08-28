@@ -7,6 +7,9 @@ import  clover from './assets/clover.png'
 import logo from './assets/logo.png'
 import Dashboard from "./Pages/Admin/Dashboard";
 import Sale from "./Pages/Admin/Sale"
+import Server from "./Pages/Admin/Server"
+import Machine from "./Pages/Admin/Machine";
+import Log from "./Pages/Admin/Log"
 
 export default function App() {
 
@@ -51,9 +54,11 @@ export default function App() {
         <Route
           path="/login"
           element={
-            <div className="lg:flex lg:flex-row  sm:flex sm:flex-col h-screen w-full sm:h-screen overflow-hidden sm:overflow-hidden">
+            <div className="lg:flex lg:flex-row  sm:flex sm:flex-col h-screen w-full sm:h-screen lg:overflow-hidden ">
               <div className="lg:ml-6">
-                <div className=" lg:border-[1px] lg:border-gray-300 sm:border-0  border-solid lg:m-0  flex flex-col  h-full sm:flex sm:mr-64  rounded-2xl m-8 lg:p-6 bg-white border border-gray-300 shadow-md md:shadow-none sm:shadow-none  md:border-0 md:border-gray-300  ">
+                <div className="hidden lg:flex lg:flex-col lg:border lg:border-gray-300 
+                lg:rounded-2xl lg:m-0 lg:p-6 lg:bg-white lg:shadow-md 
+                h-ful ">
                 <div>
                   <img src={logo} className="  sm:w-[100px] sm:h-[100px] lg:w-[200px] sm:ml-52 lg:h-[180px] lg:m-0 "/>
 
@@ -65,9 +70,9 @@ export default function App() {
               </div>
               </div>
               
-            <div className="  flex flex-col items-center justify-center bg-white lg:ml-72">
+            <div className=" mt-52 flex flex-col sm:text-center sm:mt-24 items-center justify-center bg-white lg:ml-72 lg:mt-0">
               <div>
-                  <h2 className="lg:text-3xl sm:text-2xl  text-black text-center font-semibold mb-6 drop-shadow-lg">
+                  <h2 className="lg:text-3xl sm:text-2xl  text-black text-center  font-semibold mb-6 drop-shadow-lg ">
                   <a href="#" >Sign in to Clover Carte</a>
                 </h2>
                 <h2 className="text-lg text-gray-400  mb-6 sm:text-lg  sm:mt-0">
@@ -112,7 +117,7 @@ export default function App() {
                   Login
                 </button>
 
-                <p className="flex flex-row m-4 text-black text-lg font-medium max-w-[380px]">
+                <p className=" m-4 text-black text-lg font-medium max-w-[380px] sm:flex sm:flex-row lg:flex lg:flex-row  flex flex-row">
                   Don’t have an account?{" "}
                   <Link
                     to="/register"
@@ -133,6 +138,9 @@ export default function App() {
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/dash" element={<Dashboard/>}/>
         <Route path="/sale" element={<Sale/>}/>
+                <Route path="/server" element={<Server/>}/>
+                <Route path="/machine" element={<Machine/>}/>
+     <Route path="/log" element={<Log/>}/>
       </Routes>
     </div>
   );
