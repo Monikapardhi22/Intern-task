@@ -101,7 +101,7 @@ export default function Log() {
                     </div>
                     {/* content for sale */}
 
-                    <div className='m-14'>
+                    <div className='m-14 sm:w-[750px]'>
                         <div className='text-2xl font-semibold m-3.5'>
                             Logs
                         </div>
@@ -139,7 +139,7 @@ export default function Log() {
                             <img
                                 src={logout}
                                 alt="Logout"
-                                className="lg:h-[80px] lg:w-[80px] sm:h-10 sm:w-10 rounded-full object-cover lg:mb-[580px]  ml-56 "
+                                className="lg:h-[80px] lg:w-[80px] sm:h-10 sm:w-10 sm:mt-3.5 rounded-full object-cover lg:mb-[580px]  ml-56 "
                             />
                         </button>
                     </div>
