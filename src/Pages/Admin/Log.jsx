@@ -1,7 +1,7 @@
 import React from 'react'
 import Admin from '../Admin'
 import { useState } from "react";
-
+import vending from "../../assets/vedening1.png"
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import logout from "../../assets/logout.jpg";
@@ -21,17 +21,17 @@ export default function Log() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-white flex justify-between items-center ">
+            <nav className="px-2 w-full  sm:h-full h-screen bg-white  flex justify-between sm:items-center ">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
-                    <div className="bg-white rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
+                    <div className="bg-white rounded-lg shadow-white lg: lg:overflow-x-hidden lg:overflow-y-auto sm:p-7 p-1 m-2 ">
 
                         <div className="">
                             <Link to="/">
-                                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
+                                <img src={logo} alt="Logo" className="h-[270px] w-[260px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
                             </Link>
 
 
-                            <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-400 lg:mt-[30px] ">
+                            <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-500 lg:mt-[30px] ">
                                 <li>
                                     <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
                                         <i class="fa-solid fa-chart-line"></i>Sale
@@ -53,7 +53,7 @@ export default function Log() {
                                         <span>Configuration</span>
                                     </div>
 
-                                    {/* Dropdown Links */}
+                                    
                                     {showLink && (
                                         <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
                                             <li>
@@ -83,48 +83,63 @@ export default function Log() {
                                         </ul>
                                     )}
                                 </li>
-                                <li>
-                                    <Link to="/contact" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-
-                                    </Link>
-                                </li>
+                               <li>
+                                                                   <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                                                       <i class="fa-solid fa-fax"></i>Machine Inventory
+                                                                   </Link>
+                                                               </li>
+                                                               <li>
+                                                                   <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                                                     <i class="fa-solid fa-icons"></i> Category
+                                                                   </Link>
+                                                               </li>
                             </ul>
                         </div>
 
 
                         <button
-                            className="block text-2xl lg:hidden lg:w-0 lg:h-0"
+                            className="block text-2xl  lg:hidden lg:w-0 lg:h-0 text-gray-400 mb-32 sm:mb-0"
                             onClick={() => setOpen(!open)}
                         >
                             ☰
                         </button>
                     </div>
+
                     {/* content for sale */}
 
-                    <div className='m-14 sm:w-[750px]'>
-                        <div className='text-2xl font-semibold m-3.5'>
+                    <div className='ml-14 mr-14 mb-14  sm:w-[750px]'>
+                        <div className=' hidden sm:block text-4xl  text-black font-semibold m-3.5 sm:mt-8 sm:m-7'>
                             Logs
                         </div>
-                        <div className='bg-white shadow-lg p-7  rounded-md  '>
-                            <div className='sm:m-3 flex '>
-                                <input type='text' placeholder='Machine Code' className='border-[1px] border-gray-400  w-[110px] sm:w-1/2 sm:text-[18px] text-gray-400 sm:p-4 p-1 rounded-md  focus:border-blue-400 focus:outline-none ' />
-                                <button className='text-lg border-[1px] ml-2 border-gray-400 rounded-md text-blue-400 sm:p-4 sm:ml-24 p-1 focus:bg-blue-300 focus:text-white focus:border-blue-300 focus:transition-colors focus:duration-300 focus:ease-in-out cursor-pointer sm:m-0 mt-1'>Show</button>
+                        <div className='bg-transparent shadow-lg p-2 sm:p-7 rounded-md  '>
+                            <div className='flex justify-center items-center'>
+                                <div className='sm:m-3 flex flex-col'>
+                                <input type='text' placeholder='Machine Code' className='border-[1px] border-blue-400 shadow-lg bg-white w-[110px] ml-2.5 sm:w-[200px] sm:text-[18px] placeholder:text-gray-300 text-black  sm:p-4 p-1 rounded-md  focus:border-blue-400 focus:outline-none ' />
+                                <button className='text-lg border-[1px]  border-blue-400 rounded-md text-blue-400 sm:p-4 sm:mt-3 ml-4 mr-9 sm:w-1/2   focus:bg-blue-300 focus:text-black focus:border-blue-300 focus:transition-colors focus:duration-300 focus:ease-in-out cursor-pointer mt-1'>Show</button>
                             </div>
-                            <div className='sm:m-3 flex m-3 sm:flex-row  flex-col sm:justify-center sm:items-center justify-center items-center'>
-                                <input type='date' placeholder='' className='border border-gray-300 font-light rounded-md p-1 m-1' />
+                            <div>
+                                <img src={vending} className='sm:h-full sm:w-full h-[200px] w-[100px]' />
+                            </div>
+                            </div>
+                            <div className='sm:m-3 mt-6 flex m-3 sm:flex-row  flex-col sm:justify-center sm:items-center justify-center items-center'>
+                                <input type='date' placeholder='Date' className='border border-blue-400 font-light text-black rounded-md p-1 m-1 placeholder:text-white' />
                                 <input
                                     type="time"
-                                    className="text-[18px] text-gray-700 p-3 rounded-md border border-gray-300 focus:border-blue-400 focus:outline-none sm:ml-8 m-1  "
+                                    className="text-[18px] text-black sm:p-1 p-1 rounded-md border border-blue-400 focus:border-blue-400 focus:outline-none sm:ml-8 m-1  "
                                 />
                                 <button className='text-lg border-[1px] border-gray-400 rounded-md text-white  sm:ml-24 p-1 bg-blue-400 px-4 focus:bg-blue-900 focus:text-white focus:border-blue-300 focus:transition-colors focus:duration-300 focus:ease-in-out cursor-pointer sm:m-0 mt-1 ml-2.5'>Filter</button>
 
                             </div>
 
                         </div>
-                        <div className='w-full bg-white shadow text-[19px] text-center text-black mt-2.5 rounded-md'>
-                            <div className='p-2.5'> No History Available !!</div>
+                        <div className='w-full bg-transparent shadow text-[19px] text-center text-white mt-2.5 rounded-md'>
+                            <div className='p-2.5'> <select className='bg-transparent text-blue-400'>
+                                <option value="">Click Here</option>
+                                <option value=" Available">No History Available !!</option>
+                                </select></div>
 
                         </div>
+
 
 
                     </div>
@@ -148,8 +163,8 @@ export default function Log() {
 
                 {open && (
 
-                    <div className="absolute top-20 left-5 sm:mb-3 lg:hidden lg:mt-3 bg-white rounded-lg shadow p-4 sm:w-[170px] z-10 sm:h-[580px]">
-                        <ul className="flex flex-col gap-4 text-base font-semibold text-gray-700 ">
+                    <div className="absolute top-20 left-5 sm:mb-3 lg:hidden lg:mt-3   rounded-lg bg-white shadow p-4 sm:w-[170px] z-10 sm:h-[580px]">
+                        <ul className="flex flex-col gap-4 text-base font-semibold text-black">
                             <li>
                                 <Link to="/sale" onClick={() => setOpen(false)}>
                                     <i class="fa-solid fa-chart-line"></i>Sale
@@ -176,13 +191,18 @@ export default function Log() {
                                     ⋆Logs
                                 </Link>
                             </li>
-
-
-                            <li>
-                                <Link to="/contact" onClick={() => setOpen(false)}>
-
+<li>
+                                <Link to="/cat" onClick={() => setOpen(false)}>
+                                    <i class="fa-solid fa-icons"></i>Category
                                 </Link>
                             </li>
+                            <li>
+                                <Link to="/mach" onClick={() => setOpen(false)}>
+                                    <i class="fa-solid fa-fax"></i>Machine Inventory
+                                </Link>
+                            </li>
+
+                           
                             <li>
 
                                 <button

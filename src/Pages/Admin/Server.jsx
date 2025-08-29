@@ -48,49 +48,55 @@ export default function Server() {
                                     </Link>
                                 </li>
 
-                               <li className="cursor-pointer">
-                                {/* Configuration Button */}
-                                <div
-                                  onClick={() => setShowLink(!showLink)}
-                                  className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
-                                >
-                                  <i className="fa-solid fa-screwdriver-wrench"></i>
-                                  <span>Configuration</span>
-                                </div>
-                              
-                                {/* Dropdown Links */}
-                                {showLink && (
-                                  <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
-                                    <li>
-                                      <Link
-                                        to="/Server"
-                                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-                                      >
-                                        ⋆Service
-                                      </Link>
-                                    </li>
-                                    <li>
-                                      <Link
-                                        to="/machine"
-                                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-                                      >
-                                        ⋆Machine
-                                      </Link>
-                                    </li>
-                                    <li>
-                                      <Link
-                                        to="/log"
-                                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-                                      >
-                                        ⋆Logs
-                                      </Link>
-                                    </li>
-                                  </ul>
-                                )}
-                              </li>
-                                <li>
-                                    <Link to="/contact" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                <li className="cursor-pointer">
+                                    {/* Configuration Button */}
+                                    <div
+                                        onClick={() => setShowLink(!showLink)}
+                                        className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                                    >
+                                        <i className="fa-solid fa-screwdriver-wrench"></i>
+                                        <span>Configuration</span>
+                                    </div>
 
+                                    {/* Dropdown Links */}
+                                    {showLink && (
+                                        <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
+                                            <li>
+                                                <Link
+                                                    to="/Server"
+                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                >
+                                                    ⋆Service
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/machine"
+                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                >
+                                                    ⋆Machine
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/log"
+                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                >
+                                                    ⋆Logs
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    )}
+                                </li>
+
+                                <li>
+                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                        <i class="fa-solid fa-icons"></i>Machine Inventory
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                        <i class="fa-solid fa-icons"></i> Category
                                     </Link>
                                 </li>
                             </ul>
@@ -154,12 +160,17 @@ export default function Server() {
                             </li>
                             <li>
                                 <Link to="/log" onClick={() => setOpen(false)}>
-                                   ⋆Logs
+                                    ⋆Logs
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/contact" onClick={() => setOpen(false)}>
-
+                                <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                    <i class="fa-solid fa-fax"></i> Machine Inventory
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                    <i class="fa-solid fa-icons"></i>Category
                                 </Link>
                             </li>
                             <li>

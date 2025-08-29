@@ -88,11 +88,16 @@ export default function Machine() {
                                    </ul>
                                  )}
                                </li>
-                                <li>
-                                    <Link to="/contact" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-
-                                    </Link>
-                                </li>
+                               <li>
+                                                                   <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                                                      <i class="fa-solid fa-fax"></i> Machine Inventory
+                                                                   </Link>
+                                                               </li>
+                                                               <li>
+                                                                   <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                                                      <i class="fa-solid fa-icons"></i>Category
+                                                                   </Link>
+                                                               </li>
                             </ul>
                         </div>
 
@@ -159,11 +164,16 @@ export default function Machine() {
                                                         </li>
 
 
-                            <li>
-                                <Link to="/contact" onClick={() => setOpen(false)}>
-
-                                </Link>
-                            </li>
+                             <li>
+                                            <Link to="/cat" onClick={() => setOpen(false)}>
+                                              <i class="fa-solid fa-icons"></i>Category
+                                            </Link>
+                                          </li>
+                                          <li>
+                                            <Link to="/mach" onClick={() => setOpen(false)}>
+                                             <i class="fa-solid fa-fax"></i>Machine Inventory
+                                            </Link>
+                                          </li>
                             <li>
 
                                 <button

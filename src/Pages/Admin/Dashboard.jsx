@@ -8,6 +8,8 @@ import product from '../../assets/product.png'
 import client from "../../assets/clinet.png"
 import order from "../../assets/order.png"
 import machine from "../../assets/machine.webp"
+// import look from "../../assets/looking.gif"
+
 
 export default function Dashboard() {
     const [open, setOpen] = useState(false);
@@ -43,45 +45,45 @@ export default function Dashboard() {
                                     </Link>
                                 </li>
                                 <li className="cursor-pointer">
-  {/* Configuration Button */}
-  <div
-    onClick={() => setShowLink(!showLink)}
-    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
-  >
-    <i className="fa-solid fa-screwdriver-wrench"></i>
-    <span>Configuration</span>
-  </div>
+                                    {/* Configuration Button */}
+                                    <div
+                                        onClick={() => setShowLink(!showLink)}
+                                        className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                                    >
+                                        <i className="fa-solid fa-screwdriver-wrench"></i>
+                                        <span>Configuration</span>
+                                    </div>
 
-  {/* Dropdown Links */}
-  {showLink && (
-    <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
-      <li className=''>
-        <Link
-          to="/Server"
-          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-        >
-          ⋆Service
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/machine"
-          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-        >
-          ⋆Machine
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/log"
-          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-        >
-          ⋆Logs
-        </Link>
-      </li>
-    </ul>
-  )}
-</li>
+                                    {/* Dropdown Links */}
+                                    {showLink && (
+                                        <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
+                                            <li className=''>
+                                                <Link
+                                                    to="/Server"
+                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                >
+                                                    ⋆Service
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/machine"
+                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                >
+                                                    ⋆Machine
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/log"
+                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                >
+                                                    ⋆Logs
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    )}
+                                </li>
 
                                 {/* <li>
                                     {/* <i class="fa-solid fa-screwdriver-wrench"></i>Configuration             */}
@@ -93,11 +95,16 @@ export default function Dashboard() {
 
 
                                 {/* </li>  */}
-                                {/* <li>
-                                    <Link to="/contact" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                        
+                                <li>
+                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                       <i class="fa-solid fa-fax"></i> Machine Inventory
                                     </Link>
-                                </li> */}
+                                </li>
+                                <li>
+                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                        <i class="fa-solid fa-icons"></i>Category
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
@@ -109,54 +116,59 @@ export default function Dashboard() {
                             ☰
                         </button>
                     </div>
-                    <div className='  lg:flex lg:justify-center lg:items-center lg:flex-wrap  lg:w-[1000px] '>
-                        <div className='lg:flex lg:flex-row lg:justify-center lg:items-center flex flex-col items-center justify-center'>
-                            <div className='flex justify-center items-center  lg:mr-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 overflow-hidden lg:m-0'>
-                                <div className='font-bold text-2xl '>
-                                    All Products
-                                    <div className='mt-3.5'>
-                                        17
+                    <div className='flex flex-col justify-center items-center'>
+
+                        <div className='  lg:flex lg:justify-center lg:items-center lg:flex-wrap  lg:w-[1000px] '>
+
+                            <div className='lg:flex lg:flex-row lg:justify-center lg:items-center flex flex-col items-center justify-center'>
+
+                                <div className='flex justify-center items-center  lg:mr-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 overflow-hidden lg:m-0'>
+                                    <div className='font-bold text-2xl '>
+                                        All Products
+                                        <div className='mt-3.5'>
+                                            17
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src={product} className='sm:w-[120px] sm:h-[120px] cursor-pointer' />
                                     </div>
                                 </div>
-                                <div>
-                                    <img src={product} className='sm:w-[120px] sm:h-[120px] cursor-pointer' />
-                                </div>
-                            </div>
-                            <div className='flex justify-center items-center  border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40  lg:m-0'>
-                                <div className='font-bold text-2xl'>
-                                    All Clients
-                                    <div className='mt-3.5'>
-                                        3
+                                <div className='flex justify-center items-center  border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40  lg:m-0'>
+                                    <div className='font-bold text-2xl'>
+                                        All Clients
+                                        <div className='mt-3.5'>
+                                            3
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src={client} className='sm:w-[120px] sm:h-[120px]  cursor-pointer ' />
                                     </div>
                                 </div>
-                                <div>
-                                    <img src={client} className='sm:w-[120px] sm:h-[120px]  cursor-pointer ' />
-                                </div>
                             </div>
-                        </div>
-                        <div className='flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-center lg:items-center'>
+                            <div className='flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-center lg:items-center'>
 
 
-                            <div className='flex justify-center items-center sm:py-4 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0'>
-                                <div className='font-bold text-2xl'>
-                                    All Orders
-                                    <div className='mt-3.5'>
-                                        1200
+                                <div className='flex justify-center items-center sm:py-4 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0'>
+                                    <div className='font-bold text-2xl'>
+                                        All Orders
+                                        <div className='mt-3.5'>
+                                            1200
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src={order} className='sm:w-[100px] sm:h-[100px] ml-3 cursor-pointer sm:ml-5 w-[70px] h-[90px]' />
                                     </div>
                                 </div>
-                                <div>
-                                    <img src={order} className='sm:w-[100px] sm:h-[100px] ml-3 cursor-pointer sm:ml-5 w-[70px] h-[90px]' />
-                                </div>
-                            </div>
-                            <div className='flex justify-center items-center sm:py-4 lg:ml-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0'>
-                                <div className='font-bold text-2xl '>
-                                    All Machine
-                                    <div className='mt-3.5'>
-                                        1000
+                                <div className='flex justify-center items-center sm:py-4 lg:ml-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0'>
+                                    <div className='font-bold text-2xl '>
+                                        All Machine
+                                        <div className='mt-3.5'>
+                                            1000
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <img src={machine} className='sm:w-[100px] sm:h-[100px] cursor-pointer sm:ml-5 ' />
+                                    <div>
+                                        <img src={machine} className='sm:w-[100px] sm:h-[100px] cursor-pointer sm:ml-5 ' />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +208,7 @@ export default function Dashboard() {
 
                             <li>
                                 <Link to="/server" onClick={() => setOpen(false)}>
-                                   ⋆Server
+                                    ⋆Server
                                 </Link>
                             </li>
                             <li>
@@ -206,15 +218,20 @@ export default function Dashboard() {
                             </li>
                             <li>
                                 <Link to="/log" onClick={() => setOpen(false)}>
-                                   ⋆Logs
+                                    ⋆Logs
                                 </Link>
                             </li>
-
                             <li>
-                                <Link to="/contact" onClick={() => setOpen(false)}>
-
+                                <Link to="/cat" onClick={() => setOpen(false)}>
+                                    <i class="fa-solid fa-icons"></i>Category
                                 </Link>
                             </li>
+                            <li>
+                                <Link to="/mach" onClick={() => setOpen(false)}>
+                                   <i class="fa-solid fa-fax"></i> Machine Inventory
+                                </Link>
+                            </li>
+
                             <li>
 
                                 <button

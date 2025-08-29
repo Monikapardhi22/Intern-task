@@ -87,10 +87,15 @@ export default function Sale() {
   )}
 </li>
                                 <li>
-                                    <Link to="/contact" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-
-                                    </Link>
-                                </li>
+                                                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                                                        <i class="fa-solid fa-icons"></i>Machine Inventory
+                                                                    </Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                                                      <i class="fa-solid fa-icons"></i> Category
+                                                                    </Link>
+                                                                </li>
                             </ul>
                         </div>
 
@@ -106,7 +111,7 @@ export default function Sale() {
                     <div className='   lg:w-[1100px] '>
                         <div className=' sm:ml-56 lg:ml-0  sm:mt-9 lg:mt-0 sm:overflow-hidden lg:overflow-hidden'>
                             <div className=''>
-                                <h1 className='text-xl font-semibold lg:text-3xl m-2.5'>
+                                <h1 className='text-xl  font-semibold lg:text-3xl m-2.5'>
                                     Sales
                                 </h1>
 

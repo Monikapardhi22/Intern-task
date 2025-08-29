@@ -55,8 +55,8 @@ export default function Try() {
 
                         <table className="w-full">
                             <thead className="border-[1px] bg-blue-400">
-                                <tr className="p-2 sm:p-5 ">
-                                    <th className="p-5">
+                                <tr className="p-1 sm:p-5 ">
+                                    <th className="">
                                         Sr. No.
                                     </th>
                                     <th className="p-5">
@@ -87,7 +87,7 @@ export default function Try() {
                             </thead>
                             <tbody className="text-gray-400 text-[15px]">
                                 <tr>
-                                    <td className="p-5">
+                                    <td className="p-5 ">
                                         1
                                     </td>
                                     <td className="p-5">

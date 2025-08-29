@@ -10,6 +10,9 @@ import Sale from "./Pages/Admin/Sale"
 import Server from "./Pages/Admin/Server"
 import Machine from "./Pages/Admin/Machine";
 import Log from "./Pages/Admin/Log"
+import user from "./assets/user.webp"
+import MachineInventory from "./Pages/Admin/Machine Inventory";
+import Category from "./Pages/Admin/Category";
 
 export default function App() {
 
@@ -75,9 +78,10 @@ export default function App() {
                   <h2 className="lg:text-3xl sm:text-2xl  text-black text-center  font-semibold mb-6 drop-shadow-lg ">
                   <a href="#" >Sign in to Clover Carte</a>
                 </h2>
-                <h2 className="text-lg text-gray-400  mb-6 sm:text-lg  sm:mt-0">
-                 Enter your details below.
+                <h2 className="text-lg flex text-gray-400  mb-6 sm:text-lg sm:ml-2  sm:mt-0">
+                 Enter your details below.    <img src={user} className="h-[20px] w-[20px]  mt-1 cursor-pointer"/>
                 </h2>
+            
 
                 </div> 
               <div
@@ -141,6 +145,8 @@ export default function App() {
                 <Route path="/server" element={<Server/>}/>
                 <Route path="/machine" element={<Machine/>}/>
      <Route path="/log" element={<Log/>}/>
+     <Route path="/cat" element={<Category/>}/>
+     <Route path="/mach" element={<MachineInventory/>}/>
       </Routes>
     </div>
   );
