@@ -144,9 +144,12 @@ export default function Category() {
             <div className='p-1.5 bg-white text-black shadow  sm:p-12'>
               <div className='flex justify-between items-center sm:flex '>
                 <input type='search' className=' p-1 border-b-[1px] w-1/2 border-gray-400 placeholder:p-1 focus:border-2 focus:border-blue-400 rounded-2xl' placeholder='Search' />
-                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-black overflow-hidden'>
+                <button
+                  className="border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-white hover:bg-blue-600"
+                >
                   + New Category
-                </div>
+                </button>
+
               </div>
 
 
