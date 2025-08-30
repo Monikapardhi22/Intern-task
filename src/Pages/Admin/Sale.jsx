@@ -4,7 +4,8 @@ import { useState } from "react";
 import sales from '../../assets/saless.png'
 import { motion } from 'motion/react';
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import Video from "../../assets/Black White Bold Simple Initials Name Logo.mp4"
 import logout from "../../assets/logout.jpg";
 import layer from "../../assets/layers.png"
 import razo from "../../assets/razorpe.png"
@@ -25,83 +26,93 @@ export default function Sale() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-white ">
+            <nav className="px-2 w-full bg-black overflow-hidden">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
-                    <div className="bg-white rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
+                    <div className="bg-black rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7  ">
 
                         <div className="">
                             <Link to="/">
-                                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
+                            <video 
+                                                                    src={Video} 
+                                                                    controls 
+                                                                    autoPlay 
+                                                                    loop 
+                                                                    muted 
+                                                                    playsInline
+                                                                    className=" sm:w-[200px] sm:h-[300px] lg:w-[200px] sm:ml-52 lg:h-[230px] lg:m-0 lg:block sm:hidden  hidden h-screen
+                                                                     rounded-xl shadow-lg"
+                                                                  />
+                                {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
                             </Link>
 
 
                             <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-400 lg:mt-[30px] ">
                                 <li>
-                                    <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
+                                    <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-white  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
                                         <i class="fa-solid fa-chart-line"></i>Sale
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
+                                    <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
                                         <i class="fa-solid fa-grip"></i>Dashboard
                                     </Link>
                                 </li>
- <li className="cursor-pointer">
-  {/* Configuration Button */}
-  <div
-    onClick={() => setShowLink(!showLink)}
-    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
-  >
-    <i className="fa-solid fa-screwdriver-wrench"></i>
-    <span>Configuration</span>
-  </div>
+                                <li className="cursor-pointer">
+                                    {/* Configuration Button */}
+                                    <div
+                                        onClick={() => setShowLink(!showLink)}
+                                        className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-white lg:px-10 lg:py-2"
+                                    >
+                                        <i className="fa-solid fa-screwdriver-wrench"></i>
+                                        <span>Configuration</span>
+                                    </div>
 
-  {/* Dropdown Links */}
-  {showLink && (
-    <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
-      <li>
-        <Link
-          to="/Server"
-          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-        >
-          ⋆Service
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/machine"
-          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-        >
-          ⋆Machine
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/log"
-          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
-        >
-          ⋆Logs
-        </Link>
-      </li>
-    </ul>
-  )}
-</li>
+                                    {/* Dropdown Links */}
+                                    {showLink && (
+                                        <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
+                                            <li>
+                                                <Link
+                                                    to="/Server"
+                                                    className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
+                                                >
+                                                    ⋆Service
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/machine"
+                                                    className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
+                                                >
+                                                    ⋆Machine
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/log"
+                                                    className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
+                                                >
+                                                    ⋆Logs
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    )}
+                                </li>
                                 <li>
-                                                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                                                        <i class="fa-solid fa-icons"></i>Machine Inventory
-                                                                    </Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                                                      <i class="fa-solid fa-icons"></i> Category
-                                                                    </Link>
-                                                                </li>
+                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                        <i class="fa-solid fa-icons"></i>Machine Inventory
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                        <i class="fa-solid fa-icons"></i> Category
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
 
                         <button
-                            className="block text-2xl lg:hidden lg:w-0 lg:h-0"
+                            className="block text-4xl lg:hidden lg:w-0 lg:h-0 text-white"
                             onClick={() => setOpen(!open)}
                         >
                             ☰
@@ -116,9 +127,9 @@ export default function Sale() {
                                 </h1>
 
                             </div>
-                            <div className='border border-white shadow-lg rounded-md sm:flex sm:items-center sm:justify-around flex justify-center items-center  '>
+                            <div className='border-b-2 border-gray-100 text-white shadow-lg rounded-2xl sm:flex sm:items-center sm:justify-around flex justify-center items-center  '>
                                 <div className='m-5 mr-12' >
-                                    <select className='border-2 border-black hover:border-2 hover:border-blue-600 p-3 focus:border-blue-600 rounded-lg sm:w-[300px] py-3 '  >
+                                    <select className='border-b-2 border-gray-100 hover:border-2 hover:border-blue-600 p-3 focus:border-blue-600 rounded-lg sm:w-[300px] py-3 '  >
                                         <option value="" className='disabled hidden text-5xl'>
                                             Select Option
                                         </option>
@@ -140,15 +151,16 @@ export default function Sale() {
                                     <img src={sales} className='h-[200px] w-[200px]   ' />
                                 </motion.div>
                             </div>
-                            <div className='border border-white shadow-md rounded-md mt-4 sm:flex sm:justify-around sm:items-center flex justify-between items-center '>
+                            <div className='border-b-2 border-gray-100 shadow-md rounded-md mt-4 sm:flex sm:justify-around sm:items-center flex justify-between items-center '>
                                 <div>
                                     <input
                                         type="date"
-                                        className="border border-gray-400 sm:p-2 sm:px-9 m-5 p-2 focus:border-blue-500 hover:border-blue-600 rounded-lg"
+                                        name='date' placeholder='Date'
+                                        className="border-b-2 text-white border-gray-100 sm:p-2 sm:px-9 m-5 p-2 focus:border-blue-500 focus:border-b-2  hover:border-blue-600 rounded-lg"
                                     />
 
                                 </div>
-                                <div className='border border-gray-400 sm:p-2 sm:px-9 p-2 sm:m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
+                                <div className='border-b-2 border-gray-100 text-white sm:p-2 sm:px-9 p-2 sm:m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
                                     <select
 
 
@@ -167,11 +179,11 @@ export default function Sale() {
 
                             </div>
 
-                            <div className='border border-white shadow-md rounded-md mt-4 sm:flex sm:justify-around sm:items-center flex flex-col '>
+                            <div className='border-b-2 border-gray-100 shadow-md rounded-md mt-4 sm:flex sm:justify-around sm:items-center flex flex-col '>
                                 <div className='flex sm:flex  lg:flex sm:flex-wrap sm:flex-row flex-col justify-center items-center'>
                                     <div className=' '>
                                         <motion.div
-                                            className="w-56 sm:h-[200px] h-[150px] cursor-pointer [perspective:700px]"
+                                            className="w-56 mt-2.5 sm:h-[200px] h-[150px] cursor-pointer [perspective:700px]"
                                             onClick={() => setFlipped(!flipped)}
                                         >
                                             <motion.div
@@ -182,7 +194,7 @@ export default function Sale() {
                                             >
 
                                                 <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
-                                                    <img src={layer} className='w-14 mr-5' /> Sale of Cloud
+                                                    <img src={layer} className='w-14 mr-5 p-1.5' /> Sale of Cloud
                                                 </div>
 
 
@@ -190,7 +202,7 @@ export default function Sale() {
                                                     className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-500  font-bold rounded-xl backface-hidden"
                                                     style={{ transform: "rotateY(180deg)" }}
                                                 > <div className='flex flex-row'>
-                                                        <img src={layer} className='w-14 mr-2 ' />
+                                                        <img src={layer} className='w-14 mr-2 p-1.5' />
                                                         Price -<br />$1200
                                                     </div>
                                                 </div>
@@ -212,7 +224,7 @@ export default function Sale() {
                                             >
 
                                                 <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
-                                                    <img src={layer} className='w-14 mr-10' /><div className='mr-6'>
+                                                    <img src={layer} className='w-14 mr-10 p-1.5' /><div className='mr-6 p-1.5'>
                                                         STPTS
                                                     </div>
                                                 </div>
@@ -222,7 +234,7 @@ export default function Sale() {
                                                     className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-500  font-bold rounded-xl backface-hidden"
                                                     style={{ transform: "rotateY(180deg)" }}
                                                 > <div className='flex flex-row'>
-                                                        <img src={layer} className='w-14 mr-2 ' />
+                                                        <img src={layer} className='w-14 mr-2 p-1.5 ' />
                                                         Price -<br />$2400
                                                     </div>
                                                 </div>
@@ -242,7 +254,7 @@ export default function Sale() {
                                             >
 
                                                 <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
-                                                    <img src={layer} className='w-14 mr-5' /><div className='mr-6'>
+                                                    <img src={layer} className='w-14 mr-5 p-1.5' /><div className='mr-6'>
                                                         VendT3
                                                     </div>
                                                 </div>
@@ -252,7 +264,7 @@ export default function Sale() {
                                                     className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-500  font-bold rounded-xl backface-hidden"
                                                     style={{ transform: "rotateY(180deg)" }}
                                                 > <div className='flex flex-row'>
-                                                        <img src={layer} className='w-14 mr-2 ' />
+                                                        <img src={layer} className='w-14 mr-2 p-1.5' />
                                                         Price -<br />$1900
                                                     </div>
                                                 </div>
@@ -274,7 +286,7 @@ export default function Sale() {
                                             >
 
                                                 <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
-                                                    <img src={layer} className='w-14 mr-3.5' />
+                                                    <img src={layer} className='w-14 mr-3.5 p-1.5' />
                                                     <div className='mr-4'>
                                                         Cosmetic
                                                     </div>
@@ -299,16 +311,16 @@ export default function Sale() {
 
                             </div>
                             <div className='m-5'>
-                                <div className='text-2xl font-semibold'>
+                                <div className='text-2xl font-semibold text-white'>
                                     Business Analysis
                                 </div>
                                 <div className='flex  sm:flex sm:flex-wrap mt-3.5  lg:ml-5  flex-col '>
                                     <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                        <div className='text-[16px] text-gray-500'>
+                                        <div className='text-[16px]  text-white'>
                                             Transaction amount/number of transactions
 
                                         </div>
-                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                        <div className='text-[18px] text-white flex items-center font-bold text-right p-1.5'>
                                             ₹0.00|0<div className='text-[11px] font-light'>
                                                 Trx
                                             </div>
@@ -317,31 +329,31 @@ export default function Sale() {
 
                                     </div>
                                     <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                        <div className='text-[16px] text-gray-500'>
+                                        <div className='text-[16px] text-white'>
                                             Refund amount/number of refunds
 
                                         </div>
-                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5 text-white'>
                                             ₹0.00|0<div className='text-[11px] font-light'>
                                                 Trx
                                             </div>
                                         </div>
                                     </div>
                                     <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                        <div className='text-[16px] text-gray-500'>
+                                        <div className='text-[16px] text-white'>
                                             Refund rate
 
                                         </div>
-                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                        <div className='text-[18px] text-white flex items-center font-bold text-right p-1.5'>
                                             0.00%
                                         </div>
                                     </div>
                                     <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
-                                        <div className='text-[16px] text-gray-500'>
+                                        <div className='text-[16px] text-white'>
                                             Transaction value/number of transactions
 
                                         </div>
-                                        <div className='text-[18px] flex items-center font-bold text-right p-1.5'>
+                                        <div className='text-[18px] flex text-white items-center font-bold text-right p-1.5'>
                                             ₹0.00|0<div className='text-[11px] font-light'>
                                                 Trx
                                             </div>
@@ -356,13 +368,13 @@ export default function Sale() {
                                 <div>
                                     <img src={chart} />
                                 </div>
-                                <div className=' border rounded-md mt-4 flex  flex-col justify-around items-center shadow-lg border-white '>
+                                <div className=' border rounded-md mt-4 text-white flex  flex-col justify-around items-center shadow-lg border-white '>
                                     <div className='text-2xl font-semibold'>
                                         Top Payment Method
                                     </div>
                                     <div className=' ' >
                                         <table className='sm:w-full lg:w-[1000px] mt-3   ' >
-                                            <thead className='bg-blue-400  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
+                                            <thead className='bg-blue-400 text-[16px]  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
                                                 <tr>
                                                     <th>Name </th>
                                                     <th>Amount</th>
@@ -382,7 +394,7 @@ export default function Sale() {
                                         </table>
                                     </div>
                                 </div>
-                                <div className='mt-6 h-full'>
+                                <div className='mt-6 h-full mb-6'>
                                     {/* <select className='w-full border  p-2.5 shadow bg-white rounded-md focus:border-blue-300'>
                                                 <option value=""> <h1 className='text-2xl font-semibold'>
                                                     Transition
@@ -450,11 +462,17 @@ export default function Sale() {
                                     ⋆Logs
                                 </Link>
                             </li>
-                            <li>
-                                <Link to="/contact" onClick={() => setOpen(false)}>
-
-                                </Link>
-                            </li>
+                                  
+                                                        <li>
+                                                            <Link to="/cat" onClick={() => setOpen(false)} className='hover:text-black '>
+                                                                <i class="fa-solid fa-icons"></i>Category
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link to="/mach" onClick={() => setOpen(false)} className='hover:text-black '>
+                                                               <i class="fa-solid fa-fax"></i> Machine Inventory
+                                                            </Link>
+                                                        </li>
                             <li>
 
                                 <button

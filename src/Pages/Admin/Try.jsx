@@ -23,18 +23,19 @@ export default function Try() {
     }, []);
 
     return (
-        <div className="w-full relative" ref={dropdownRef}>
+        <div className="w-full relative bg-black text-white" ref={dropdownRef}>
             {/* Dropdown header */}
             <div
                 onClick={() => setOpen(!open)}
-                className="border p-2.5 rounded-md shadow cursor-pointer bg-white text-2xl font-semibold"
+                className="border p-2.5 text-white mb-4 rounded-md shadow cursor-pointer bg-black text-2xl font-semibold"
             >
                 Transaction
             </div>
 
             {/* Dropdown body */}
             {open && (
-                <div className=" w-full mt-1 bg-white border rounded-md shadow z-10">
+                <div className=" w-full mt-1 bg-bl
+                 border rounded-md shadow z-10">
                     {/* Search input */}
                     <div className="flex justify-between items-center">
                         <input

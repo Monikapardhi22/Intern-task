@@ -4,7 +4,9 @@ import * as XLSX from "xlsx";
 import Admin from '../Admin'
 // import {  } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import Video from "../../assets/Black White Bold Simple Initials Name Logo.mp4"
+
 // import layer from "../../assets/layers.png"
 import logout from "../../assets/logout.jpg";
 
@@ -42,13 +44,23 @@ export default function Category() {
   return (
        <div>
 
-      <nav className="px-2 w-full bg-white ">
+      <nav className="px-2 w-full bg-black h-screen">
         <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
-          <div className="bg-white rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7">
+          <div className="bg-black rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7 text-white">
 
             <div className="overflow-hidden">
               <Link to="/">
-                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
+              <video 
+                                                      src={Video} 
+                                                      controls 
+                                                      autoPlay 
+                                                      loop 
+                                                      muted 
+                                                      playsInline
+                                                      className=" sm:w-[200px] sm:h-[300px] lg:w-[200px] sm:ml-52 lg:h-[230px] lg:m-0 lg:block sm:hidden  hidden h-screen
+                                                       rounded-xl shadow-lg"
+                                                    />
+                {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
               </Link>
 
 
@@ -120,20 +132,20 @@ export default function Category() {
 
 
             <button
-              className="block text-2xl lg:hidden lg:w-0 lg:h-0"
+              className="block text-2xl lg:hidden lg:w-0 lg:h-0 text-white"
               onClick={() => setOpen(!open)}
             >
               ☰
             </button>
           </div>
           <div>
-            <div className='text-2xl  font-semibold text-left p-3.5 '>
+            <div className='text-2xl text-white font-semibold text-left p-3.5 '>
               Category
             </div>
-            <div className='p-1.5 bg-white shadow  sm:p-12'>
+            <div className='p-1.5 bg-black text-white shadow  sm:p-12'>
               <div className='flex justify-between items-center sm:flex '>
                 <input type='search' className=' p-1 border-[1px] w-1/2 border-gray-200 placeholder:p-1 rounded-md' placeholder='Search' />
-                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5'>
+                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-white'>
                   + New Category
                 </div>
               </div>
@@ -143,7 +155,7 @@ export default function Category() {
       {data.length > 0 && (
         <div className="overflow-x-auto">
           <table className="table-auto border-collapse  w-full">
-            <thead className="bg-white">
+            <thead className="bg-black text-white">
               <tr>
               
                 {columns.map((col, index) => (

@@ -3,8 +3,9 @@ import { Route, Routes, Navigate, Link, useNavigate } from "react-router-dom";
 import Home from "./Pages/Home";
 import Registration from "./Pages/Registration";
 import Admin from "./Pages/Admin";
-import  clover from './assets/clover.png'
-import logo from './assets/logo.png'
+import  clover from './assets/Developer1.gif'
+// import logo from './assets/logo.png'
+import Video from "./assets/Black White Bold Simple Initials Name Logo.mp4"
 import Dashboard from "./Pages/Admin/Dashboard";
 import Sale from "./Pages/Admin/Sale"
 import Server from "./Pages/Admin/Server"
@@ -48,7 +49,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="bg-black">
       <Routes>
         {/* Default redirect */}
         <Route path="/" element={<Navigate to="/login" />} />
@@ -57,25 +58,33 @@ export default function App() {
         <Route
           path="/login"
           element={
-            <div className="lg:flex lg:flex-row  sm:flex sm:flex-col h-screen w-full sm:h-screen lg:overflow-hidden ">
+            <div className="lg:flex lg:flex-row  sm:flex sm:flex-col h-screen w-full sm:h-screen lg:overflow-hidden bg-black">
               <div className="lg:ml-6">
-                <div className="hidden lg:flex lg:flex-col lg:border lg:border-gray-300 
-                lg:rounded-2xl lg:m-0 lg:p-6 lg:bg-white lg:shadow-md 
+                <div className=" lg:flex lg:flex-col lg:border lg:border-gray-300 
+                lg:rounded-2xl lg:m-0 lg:p-6 lg:bg-black lg:shadow-lg  
                 h-ful ">
                 <div>
-                  <img src={logo} className="  sm:w-[100px] sm:h-[100px] lg:w-[200px] sm:ml-52 lg:h-[180px] lg:m-0 "/>
-
+                  {/* <img src={logo} className="  sm:w-[100px] sm:h-[100px] lg:w-[200px] sm:ml-52 lg:h-[180px] lg:m-0 "/> */}
+                   <video 
+        src={Video} 
+        controls 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="w-[100px] sm:w-[300px] sm:h-[300px] lg:w-[400px] sm:ml-52 lg:h-[230px] lg:m-0  rounded-xl shadow-lg"
+      />
                 </div>
-                <div className="font-medium lg:text-4xl lg:text-gray-800 mb-6 sm:hidden md:hidden lg:block lg:mb-8 md:mr-5 lg:mt-8 lg:font-bold">Hi, Welcome Back</div>
+                <div className="font-medium lg:text-4xl lg:text-white mb-6 sm:hidden md:hidden lg:block lg:mb-8 md:mr-5 lg:mt-8 lg:font-bold">Hi, Welcome Back</div>
                 <div>
-                  <img src={clover} className="mb-5 sm:hidden md:hidden lg:block  lg:mb-7"/>
+                  <img src={clover} className="hidden   w-[400px] rounded-3xl h-[300px] mb-5 sm:hidden  md:hidden lg:block  lg:mb-7"/>
                 </div>
               </div>
               </div>
               
-            <div className=" mt-52 flex flex-col sm:text-center sm:mt-24 items-center justify-center bg-white lg:ml-72 lg:mt-0">
+            <div className=" mt-3.5 flex flex-col sm:text-center sm:mt-24 items-center justify-center bg-black lg:ml-72 lg:mt-0">
               <div>
-                  <h2 className="lg:text-3xl sm:text-2xl  text-black text-center  font-semibold mb-6 drop-shadow-lg ">
+                  <h2 className="lg:text-3xl sm:text-2xl  text-white text-center  font-semibold mb-6 drop-shadow-lg ">
                   <a href="#" >Sign in to Clover Carte</a>
                 </h2>
                 <h2 className="text-lg flex text-gray-400  mb-6 sm:text-lg sm:ml-2  sm:mt-0">
@@ -96,7 +105,7 @@ export default function App() {
                   placeholder="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className=" rounded-md   py-3.5 p-3 focus:border-blue-500  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-9   lg:w-[380px] hover:border-blue-500 outline-none "
+                  className=" rounded-4xl   py-3.5 p-3 focus:border-blue-500  border-gray-100 border-b text-black placeholder-gray-400 placeholder:text-lg w-full mb-9   lg:w-[380px] hover:border-blue-500 outline-none focus:text-white"
                 />
 {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
                 {/* Password */}
@@ -105,7 +114,7 @@ export default function App() {
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className=" rounded-md  py-3.5 p-3 border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg  w-full lg:w-[380px] hover:border-blue-500 focus:border-blue-500  outline-none"
+                  className=" rounded-4xl  py-3.5 p-3 border-gray-100 border-b text-black placeholder-gray-400 placeholder:text-lg  w-full lg:w-[380px] focus:text-white hover:border-blue-500 focus:border-blue-500  outline-none"
                 />
 
                 {passwordError && (
@@ -116,12 +125,12 @@ export default function App() {
                 <button
                   type="button"
                   onClick={handleLogin}
-                  className="sm:w-[380px] lg:w-[380px] md:w-[260px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:text-white transition "
+                  className="sm:w-[380px] lg:w-[380px] md:w-[260px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-400 mt-5 rounded-4xl text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:text-white transition "
                 >
                   Login
                 </button>
 
-                <p className=" m-4 text-black text-lg font-medium max-w-[380px] sm:flex sm:flex-row lg:flex lg:flex-row  flex flex-row">
+                <p className=" m-4 text-gray-200 text-lg font-medium max-w-[380px] sm:flex sm:flex-row lg:flex lg:flex-row  flex flex-row">
                   Don’t have an account?{" "}
                   <Link
                     to="/register"

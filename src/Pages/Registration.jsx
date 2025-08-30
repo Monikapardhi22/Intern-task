@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Video from "../assets/Black White Bold Simple Initials Name Logo.mp4"
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Registration() {
@@ -47,7 +48,16 @@ export default function Registration() {
     <div 
       className="h-screen w-full  flex items-center justify-center  flex-col"
     >
-      <div className="text-2xl text-black text-center font-semibold mt-6 drop-shadow-lg">
+       <video 
+              src={Video} 
+              controls 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-[100px] sm:w-[300px] sm:h-[300px] lg:w-[400px] sm:ml-52 lg:h-[230px] lg:m-0  rounded-xl shadow-lg"
+            />
+      <div className="text-2xl text-white text-center font-semibold mt-6 drop-shadow-lg">
           Registration
         </div>
       <form
@@ -64,7 +74,7 @@ export default function Registration() {
           <input
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="rounded-md focus:border-blue-500   py-3.5 p-3  capitalize mb-4 border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
+            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  capitalize mb-4 border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Enter your name"
           />
         </div>
@@ -75,7 +85,7 @@ export default function Registration() {
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="rounded-md  focus:border-blue-500   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-3 hover:border-blue-500 outline-none "
+            className="rounded-4xl  focus:border-blue-500   py-3.5 p-3  border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full mb-3 hover:border-blue-500 outline-none "
             placeholder="Enter your email"
           />
         </div>
@@ -86,7 +96,7 @@ export default function Registration() {
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            className="rounded-md focus:border-blue-500   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full mb-1 hover:border-blue-500 outline-none "
+            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full mb-1 hover:border-blue-500 outline-none "
             placeholder="Enter password"
           />
           {passwordError && <p className="text-red-300 text-sm">{passwordError}</p>}
@@ -98,7 +108,7 @@ export default function Registration() {
           <input
             onChange={(e) => setConfirm(e.target.value)}
             type="password"
-            className="rounded-md focus:border-blue-500   py-3.5 p-3  border border-gray-300 text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
+            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Re-enter password"
           />
           {confirmError && <p className="text-red-300 text-sm">{confirmError}</p>}
@@ -109,13 +119,13 @@ export default function Registration() {
 
      
         <button
-          className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-white hover:bg-blue-700 hover:border-blue-500 outline-none  hover:text-white transition"
+          className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-3xl text-[17px]   text-shadow-lg font-semibold text-gray-100 hover:bg-blue-700 hover:border-blue-500 outline-none  hover:text-white transition"
         >
           Register
         </button>
 
        
-        <div className="flex flex-row m-4 text-black text-lg font-medium">
+        <div className="flex flex-row m-4 text-gray-300 text-lg font-medium">
           <span>Already have an account?</span>
           <Link to="/login" className="text-blue-400 pl-2 text-lg font-medium hover:text-blue-800">
             Login

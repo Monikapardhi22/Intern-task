@@ -4,7 +4,8 @@ import { useState } from "react";
 // import sales from '../../assets/saless.png'
 // import { motion } from 'motion/react';
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import Video from "../../assets/Black White Bold Simple Initials Name Logo.mp4"
 import logout from "../../assets/logout.jpg";
 // import layer from "../../assets/layers.png"
 // import razo from "../../assets/razorpe.png"
@@ -26,13 +27,23 @@ export default function Server() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-white flex justify-between items-center ">
+            <nav className="px-2 w-full bg-black flex justify-between items-center overflow-hidden  h-screen">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
-                    <div className="bg-white rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
+                    <div className="bg-black text-white rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
 
                         <div className="">
                             <Link to="/">
-                                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
+                            <video 
+                                                                    src={Video} 
+                                                                    controls 
+                                                                    autoPlay 
+                                                                    loop 
+                                                                    muted 
+                                                                    playsInline
+                                                                    className=" sm:w-[200px] sm:h-[300px] lg:w-[200px] sm:ml-52 lg:h-[230px] lg:m-0 lg:block sm:hidden  hidden h-screen
+                                                                     rounded-xl shadow-lg"
+                                                                  />
+                                {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
                             </Link>
 
 
@@ -104,7 +115,7 @@ export default function Server() {
 
 
                         <button
-                            className="block text-2xl lg:hidden lg:w-0 lg:h-0"
+                            className="block text-4xl lg:hidden lg:w-0 lg:h-0 mb-32"
                             onClick={() => setOpen(!open)}
                         >
                             ☰

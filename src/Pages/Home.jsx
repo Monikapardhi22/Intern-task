@@ -19,7 +19,7 @@ export default function Home() {
             <img src={rose} className='w-7'/>
             
         </div>
-        <h1 className='text-4xl  text-black font-bold'>
+        <h1 className='text-4xl  text-white font-bold'>
             Welcome, <div className='capitalize'>
               {user?.name}
             </div>

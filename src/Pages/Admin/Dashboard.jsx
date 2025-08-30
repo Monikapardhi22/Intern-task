@@ -2,7 +2,8 @@ import React from 'react'
 import Admin from '../Admin'
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import Video from "../../assets/Black White Bold Simple Initials Name Logo.mp4"
 import logout from "../../assets/logout.jpg";
 import product from '../../assets/product.png'
 import client from "../../assets/clinet.png"
@@ -23,24 +24,34 @@ export default function Dashboard() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-white ">
+            <nav className="px-2 w-full bg-black overflow-hidden">
                 <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
-                    <div className="bg-white rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7">
+                    <div className="bg-black rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto sm:p-7 py-7 px-2 ">
 
                         <div className="overflow-hidden">
                             <Link to="/">
-                                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
+                                {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
+                                  <video 
+                                        src={Video} 
+                                        controls 
+                                        autoPlay 
+                                        loop 
+                                        muted 
+                                        playsInline
+                                        className=" sm:w-[200px] sm:h-[300px] lg:w-[200px] sm:ml-52 lg:h-[230px] lg:m-0 lg:block sm:hidden  hidden h-screen
+                                         rounded-xl shadow-lg"
+                                      />
                             </Link>
 
 
-                            <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-400 lg:mt-[30px] ">
+                            <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-amber-50 lg:mt-[30px] ">
                                 <li>
-                                    <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
+                                    <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-white  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
                                         <i class="fa-solid fa-chart-line"></i>Sale
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
+                                    <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
                                         <i class="fa-solid fa-grip"></i>Dashboard
                                     </Link>
                                 </li>
@@ -48,7 +59,7 @@ export default function Dashboard() {
                                     {/* Configuration Button */}
                                     <div
                                         onClick={() => setShowLink(!showLink)}
-                                        className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                                        className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-white lg:px-10 lg:py-2"
                                     >
                                         <i className="fa-solid fa-screwdriver-wrench"></i>
                                         <span>Configuration</span>
@@ -56,11 +67,11 @@ export default function Dashboard() {
 
                                     {/* Dropdown Links */}
                                     {showLink && (
-                                        <ul className=" text-gray-700 mt-2 lg:px-12 space-y-2">
+                                        <ul className=" text-amber-50 mt-2 lg:px-12 space-y-2">
                                             <li className=''>
                                                 <Link
                                                     to="/Server"
-                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                    className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
                                                 >
                                                     ⋆Service
                                                 </Link>
@@ -68,7 +79,7 @@ export default function Dashboard() {
                                             <li>
                                                 <Link
                                                     to="/machine"
-                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                    className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
                                                 >
                                                     ⋆Machine
                                                 </Link>
@@ -76,7 +87,7 @@ export default function Dashboard() {
                                             <li>
                                                 <Link
                                                     to="/log"
-                                                    className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                                    className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
                                                 >
                                                     ⋆Logs
                                                 </Link>
@@ -85,23 +96,14 @@ export default function Dashboard() {
                                     )}
                                 </li>
 
-                                {/* <li>
-                                    {/* <i class="fa-solid fa-screwdriver-wrench"></i>Configuration             */}
-                                {/* <li>
-                                             <Link to="/Server" className="transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                       Server
-                                    </Link>
-                                        </li> */}
-
-
-                                {/* </li>  */}
+                                
                                 <li>
-                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
                                        <i class="fa-solid fa-fax"></i> Machine Inventory
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
                                         <i class="fa-solid fa-icons"></i>Category
                                     </Link>
                                 </li>
@@ -110,7 +112,7 @@ export default function Dashboard() {
 
 
                         <button
-                            className="block text-2xl lg:hidden lg:w-0 lg:h-0"
+                            className="block text-4xl lg:hidden text-white lg:w-0 lg:h-0"
                             onClick={() => setOpen(!open)}
                         >
                             ☰
@@ -122,7 +124,7 @@ export default function Dashboard() {
 
                             <div className='lg:flex lg:flex-row lg:justify-center lg:items-center flex flex-col items-center justify-center'>
 
-                                <div className='flex justify-center items-center  lg:mr-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 overflow-hidden lg:m-0'>
+                                <div className='flex justify-center items-center  lg:mr-16 border-white shadow-lg w-[200px] lg:w-[400px] rounded-2xl sm:m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 overflow-hidden lg:m-0 bg-amber-50 mt-24'>
                                     <div className='font-bold text-2xl '>
                                         All Products
                                         <div className='mt-3.5'>
@@ -133,7 +135,7 @@ export default function Dashboard() {
                                         <img src={product} className='sm:w-[120px] sm:h-[120px] cursor-pointer' />
                                     </div>
                                 </div>
-                                <div className='flex justify-center items-center  border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40  lg:m-0'>
+                                <div className='flex justify-center items-center  border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40  lg:m-0 bg-amber-50'>
                                     <div className='font-bold text-2xl'>
                                         All Clients
                                         <div className='mt-3.5'>
@@ -148,7 +150,7 @@ export default function Dashboard() {
                             <div className='flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-center lg:items-center'>
 
 
-                                <div className='flex justify-center items-center sm:py-4 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0'>
+                                <div className='flex justify-center items-center sm:py-4 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0 bg-amber-50'>
                                     <div className='font-bold text-2xl'>
                                         All Orders
                                         <div className='mt-3.5'>
@@ -159,7 +161,7 @@ export default function Dashboard() {
                                         <img src={order} className='sm:w-[100px] sm:h-[100px] ml-3 cursor-pointer sm:ml-5 w-[70px] h-[90px]' />
                                     </div>
                                 </div>
-                                <div className='flex justify-center items-center sm:py-4 lg:ml-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0'>
+                                <div className='flex justify-center items-center sm:py-4 lg:ml-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5 mb-28  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0 bg-amber-50'>
                                     <div className='font-bold text-2xl '>
                                         All Machine
                                         <div className='mt-3.5'>
@@ -194,40 +196,40 @@ export default function Dashboard() {
                 {open && (
 
                     <div className="absolute top-20 left-5 sm:mb-3 lg:hidden lg:mt-3 bg-white rounded-lg shadow p-4 sm:w-[170px] z-10 sm:h-[580px]">
-                        <ul className="flex flex-col gap-4 text-base font-semibold text-gray-700 ">
+                        <ul className="flex flex-col gap-4 text-base font-semibold text-gray-600 ">
                             <li>
-                                <Link to="/sale" onClick={() => setOpen(false)}>
+                                <Link to="/sale" onClick={() => setOpen(false) } className='hover:text-black '>
                                     <i class="fa-solid fa-chart-line"></i>Sale
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/dash" onClick={() => setOpen(false)}>
+                                <Link to="/dash" onClick={() => setOpen(false)} className='hover:text-black '>
                                     <i class="fa-solid fa-grip"></i>Dashboard
                                 </Link>
                             </li>
 
                             <li>
-                                <Link to="/server" onClick={() => setOpen(false)}>
+                                <Link to="/server" onClick={() => setOpen(false)} className='hover:text-black '>
                                     ⋆Server
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/machine" onClick={() => setOpen(false)}>
+                                <Link to="/machine" onClick={() => setOpen(false)} className='hover:text-black '>
                                     ⋆Machine
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/log" onClick={() => setOpen(false)}>
+                                <Link to="/log" onClick={() => setOpen(false)} className='hover:text-black '>
                                     ⋆Logs
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/cat" onClick={() => setOpen(false)}>
+                                <Link to="/cat" onClick={() => setOpen(false)} className='hover:text-black '>
                                     <i class="fa-solid fa-icons"></i>Category
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/mach" onClick={() => setOpen(false)}>
+                                <Link to="/mach" onClick={() => setOpen(false)} className='hover:text-black '>
                                    <i class="fa-solid fa-fax"></i> Machine Inventory
                                 </Link>
                             </li>
@@ -239,12 +241,12 @@ export default function Dashboard() {
                                         handleLogout();
                                         setOpen(false);
                                     }}
-                                    className="flex items-center gap-2 text-red-600"
+                                    className="flex items-center gap-2 text-red-600 "
                                 >
                                     <img
                                         src={logout}
                                         alt="Logout"
-                                        className="h-8 w-8 rounded-full object-cover"
+                                        className="h-8 w-8 rounded-full object-cover hover:bg-amber-100 hover:p-1 hover:rounded-2xl "
                                     />
                                     Logout
                                 </button>

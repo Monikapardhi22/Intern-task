@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react'
 import Admin from '../Admin'
 // import {  } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import Video from "../../assets/Black White Bold Simple Initials Name Logo.mp4"
 import layer from "../../assets/layers.png"
 import logout from "../../assets/logout.jpg";
 import * as XLSX from "xlsx";
@@ -37,24 +38,34 @@ export default function Dashboard() {
   return (
     <div>
 
-      <nav className="px-2 w-full bg-white overflow-y-hidden overflow-x-auto">
+      <nav className="px-2 w-full bg-black overflow-y-hidden overflow-x-auto">
         <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
-          <div className="bg-white rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7">
+          <div className="bg-black text-white rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7">
 
             <div className="overflow-hidden">
               <Link to="/">
-                <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" />
+              <video 
+                                                      src={Video} 
+                                                      controls 
+                                                      autoPlay 
+                                                      loop 
+                                                      muted 
+                                                      playsInline
+                                                      className=" sm:w-[200px] sm:h-[300px] lg:w-[200px] sm:ml-52 lg:h-[230px] lg:m-0 lg:block sm:hidden  hidden h-screen
+                                                       rounded-xl shadow-lg"
+                                                    />
+                {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
               </Link>
 
 
               <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-400 lg:mt-[30px] ">
                 <li>
-                  <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
+                  <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-white  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
                     <i class="fa-solid fa-chart-line"></i>Sale
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
+                  <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
                     <i class="fa-solid fa-grip"></i>Dashboard
                   </Link>
                 </li>
@@ -62,7 +73,7 @@ export default function Dashboard() {
                   {/* Configuration Button */}
                   <div
                     onClick={() => setShowLink(!showLink)}
-                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-white lg:px-10 lg:py-2"
                   >
                     <i className="fa-solid fa-screwdriver-wrench"></i>
                     <span>Configuration</span>
@@ -74,7 +85,7 @@ export default function Dashboard() {
                       <li className=''>
                         <Link
                           to="/Server"
-                          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                          className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
                         >
                           ⋆Service
                         </Link>
@@ -82,7 +93,7 @@ export default function Dashboard() {
                       <li>
                         <Link
                           to="/machine"
-                          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                          className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
                         >
                           ⋆Machine
                         </Link>
@@ -90,7 +101,7 @@ export default function Dashboard() {
                       <li>
                         <Link
                           to="/log"
-                          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                          className="block transition-colors duration-300 ease-in hover:text-white hover:rounded-lg"
                         >
                           ⋆Logs
                         </Link>
@@ -100,12 +111,12 @@ export default function Dashboard() {
                 </li>
 
 <li>
-                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
                                        <i class="fa-solid fa-fax"></i> Machine Inventory
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-white  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
                                        <i class="fa-solid fa-icons"></i>Category
                                     </Link>
                                 </li>
@@ -114,26 +125,26 @@ export default function Dashboard() {
 
 
             <button
-              className="block text-2xl lg:hidden lg:w-0 lg:h-0"
+              className="block text-4xl lg:hidden lg:w-0 lg:h-0 text-white"
               onClick={() => setOpen(!open)}
             >
               ☰
             </button>
           </div>
           <div className='sm:mt-[100px] '>
-            <div className='text-2xl  font-semibold text-left p-3.5 '>
+            <div className='text-2xl  font-semibold text-left p-3.5 text-white'>
               Machine Inventory
             </div>
-            <div className='p-3 bg-white shadow sm:px-16'>
+            <div className='p-3 bg-black shadow sm:px-16'>
               <div className='flex justify-between items-center '>
-                <input type='search' className=' p-1 border-[1px] w-1/2 border-gray-200 placeholder:p-1 rounded-md' placeholder='Search' />
-                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/3 text-center rounded-md sm:m-2.5'>
+                <input type='search' className=' p-1 border-b-[1px]  w-1/2 border-gray-400 placeholder:p-1 placeholder:text-white rounded-md' placeholder='Search' />
+                <div className='border-0 p-1 text-lg text-white bg-blue-400 sm:w-1/5 w-1/3 text-center rounded-md sm:m-2.5'>
                   +New Inventory
                 </div>
               </div>
 
               <div className='flex  justify-center items-center flex-col sm:flex lg:flex lg:flex-row  sm:justify-center sm:items-center'>
-                 <img src={gif1} height="200px" width="300px" />
+                 <img src={gif1} height="200px" width="300px" className='rounded-md mt-3' />
                 <div className='border-[1px] border-blue-500 sm:p-7 m-3 w-1/4 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
                   Rented <div className='flex justify-center items-center mt-3.5 text-2xl'>
                     0   <img src={layer} className='h-[30px] ml-2' />
@@ -172,7 +183,7 @@ export default function Dashboard() {
               <tr>
                 {/* <th className="border border-gray-400 px-4 py-2">Sr.No</th> */}
                 {columns.map((col, index) => (
-                  <th key={index} className=" sm:text-2xl px-4 py-2">
+                  <th key={index} className=" sm:text-2xl px-4 py-2 text-white bg-black">
                     {col}
                   </th>
                 ))}
@@ -183,7 +194,7 @@ export default function Dashboard() {
                 <tr key={i}>
                   {/* <td className="border border-gray-400 px-4 py-2">{i + 1}</td> */}
                   {columns.map((col, j) => (
-                    <td key={j} className=" px-4 py-2 sm:ml-20 sm:text-center">
+                    <td key={j} className=" px-4 py-2 sm:ml-20 sm:text-center text-white">
                       {row[col]}
                     </td>
                   ))}
