@@ -44,7 +44,7 @@ export default function Category() {
   return (
     <div>
 
-      <nav className="px-2 w-full bg-white">
+      <nav className="px-2  bg-white h-screen w-screen">
         <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
           <div className="bg-white rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7 text-black">
 
@@ -144,7 +144,7 @@ export default function Category() {
             <div className='p-1.5 bg-white text-black shadow  sm:p-12'>
               <div className='flex justify-between items-center sm:flex '>
                 <input type='search' className=' p-1 border-b-[1px] w-1/2 border-gray-400 placeholder:p-1 focus:border-2 focus:border-blue-400 rounded-2xl' placeholder='Search' />
-                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-black'>
+                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-black overflow-hidden'>
                   + New Category
                 </div>
               </div>
