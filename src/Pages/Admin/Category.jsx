@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as XLSX from "xlsx";
 
-import Admin from '../Admin'
+// import Admin from '../Admin'
 // import {  } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import logo from "../../assets/logo.png";
@@ -25,7 +25,7 @@ export default function Category() {
   const [columns, setColumns] = useState([]);
 
   useEffect(() => {
-    fetch("/public/sample_d1.xlsx")
+    fetch("/sample_d1.xlsx")
       .then((res) => res.arrayBuffer())
       .then((buffer) => {
         const workbook = XLSX.read(buffer, { type: "array" });
