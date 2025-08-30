@@ -31,27 +31,27 @@ export default function Dashboard() {
                         <div className="overflow-hidden">
                             <Link to="/">
                                 {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
-                                   <video
-                                                                                           src={Video}
-                                                                                           controls
-                                                                                           autoPlay
-                                                                                           loop
-                                                                                           muted
-                                                                                           playsInline
-                                                                                           className="w-[100px]  sm:w-[200px] sm:h-[200px] rounded-[50%] lg:block lg:w-[200px] lg:h-[200px] sm:ml-72  lg:rounded-[50%] lg:ml-8 lg:mr-4 hidden   shadow-lg"
-                                                                                         />
+                                <video
+                                    src={Video}
+                                    controls
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-[100px]  sm:w-[200px] sm:h-[200px] rounded-[50%] lg:block lg:w-[200px] lg:h-[200px] sm:ml-72  lg:rounded-[50%] lg:ml-8 lg:mr-4 hidden   shadow-lg"
+                                />
                             </Link>
 
 
                             <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-700 lg:mt-[30px] ">
                                 <li>
                                     <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
-                                        <i class="fa-solid fa-chart-line"></i>Sale
+                                        <i className="fa-solid fa-chart-line"></i>Sale
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
-                                        <i class="fa-solid fa-grip"></i>Dashboard
+                                        <i className="fa-solid fa-grip"></i>Dashboard
                                     </Link>
                                 </li>
                                 <li className="cursor-pointer">
@@ -95,15 +95,15 @@ export default function Dashboard() {
                                     )}
                                 </li>
 
-                                
+
                                 <li>
                                     <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                       <i class="fa-solid fa-fax"></i> Machine Inventory
+                                        <i className="fa-solid fa-fax"></i> Machine Inventory
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                        <i class="fa-solid fa-icons"></i>Category
+                                        <i className="fa-solid fa-icons"></i>Category
                                     </Link>
                                 </li>
                             </ul>
@@ -197,13 +197,13 @@ export default function Dashboard() {
                     <div className="absolute top-20 left-5 sm:mb-3 lg:hidden lg:mt-3 bg-white rounded-lg shadow p-4 sm:w-[170px] z-10 sm:h-[580px]">
                         <ul className="flex flex-col gap-4 text-base font-semibold text-gray-600 ">
                             <li>
-                                <Link to="/sale" onClick={() => setOpen(false) } className='hover:text-black '>
-                                    <i class="fa-solid fa-chart-line"></i>Sale
+                                <Link to="/sale" onClick={() => setOpen(false)} className='hover:text-black '>
+                                    <i className="fa-solid fa-chart-line"></i>Sale
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/dash" onClick={() => setOpen(false)} className='hover:text-black '>
-                                    <i class="fa-solid fa-grip"></i>Dashboard
+                                    <i className="fa-solid fa-grip"></i>Dashboard
                                 </Link>
                             </li>
 
@@ -224,12 +224,12 @@ export default function Dashboard() {
                             </li>
                             <li>
                                 <Link to="/cat" onClick={() => setOpen(false)} className='hover:text-black '>
-                                    <i class="fa-solid fa-icons"></i>Category
+                                    <i className="fa-solid fa-icons"></i>Category
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/mach" onClick={() => setOpen(false)} className='hover:text-black '>
-                                   <i class="fa-solid fa-fax"></i> Machine Inventory
+                                    <i className="fa-solid fa-fax"></i> Machine Inventory
                                 </Link>
                             </li>
 

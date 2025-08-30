@@ -66,12 +66,12 @@ export default function Category() {
               <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-700 lg:mt-[30px] ">
                 <li>
                   <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black   lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
-                    <i class="fa-solid fa-chart-line"></i>Sale
+                    <i className="fa-solid fa-chart-line"></i>Sale
                   </Link>
                 </li>
                 <li>
                   <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-black   lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
-                    <i class="fa-solid fa-grip"></i>Dashboard
+                    <i className="fa-solid fa-grip"></i>Dashboard
                   </Link>
                 </li>
                 <li className="cursor-pointer">
@@ -116,12 +116,12 @@ export default function Category() {
                 </li>
                 <li>
                   <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black   lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                    <i class="fa-solid fa-fax"></i>Machine Inventory
+                    <i className="fa-solid fa-fax"></i>Machine Inventory
                   </Link>
                 </li>
                 <li>
                   <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black   lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                    <i class="fa-solid fa-icons"></i>Category
+                    <i className="fa-solid fa-icons"></i>Category
                   </Link>
                 </li>
 
@@ -213,12 +213,12 @@ export default function Category() {
             <ul className="flex flex-col gap-4 text-base font-semibold text-gray-700 ">
               <li>
                 <Link to="/sale" onClick={() => setOpen(false)}>
-                  <i class="fa-solid fa-chart-line"></i>Sale
+                  <i className="fa-solid fa-chart-line"></i>Sale
                 </Link>
               </li>
               <li>
                 <Link to="/dash" onClick={() => setOpen(false)}>
-                  <i class="fa-solid fa-grip"></i>Dashboard
+                  <i className="fa-solid fa-grip"></i>Dashboard
                 </Link>
               </li>
 
@@ -239,12 +239,12 @@ export default function Category() {
               </li>
               <li>
                 <Link to="/cat" onClick={() => setOpen(false)}>
-                  <i class="fa-solid fa-icons"></i>Category
+                  <i className="fa-solid fa-icons"></i>Category
                 </Link>
               </li>
               <li>
                 <Link to="/mach" onClick={() => setOpen(false)}>
-                  <i class="fa-solid fa-fax"></i>Machine Inventory
+                  <i className="fa-solid fa-fax"></i>Machine Inventory
                 </Link>
               </li>
 
