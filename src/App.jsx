@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Route, Routes, Navigate, Link, useNavigate } from "react-router-dom";
 import Home from "./Pages/Home";
 import Registration from "./Pages/Registration";
@@ -23,7 +23,14 @@ export default function App() {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
-
+useEffect(()=>{
+    const data = {
+    name: "ronak",
+    email: "test@gmail.com",
+    password: "123456"
+}
+    localStorage.setItem("user",JSON.stringify(data))
+},[])
   const handleLogin = () => {
     if (!password) {
       setPasswordError("Password is required");

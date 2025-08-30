@@ -22,7 +22,7 @@ export default function Log() {
     return (
         <div>
 
-            <nav className="px-2 w-full  sm:h-full h-screen bg-white   flex justify-between sm:items-center ">
+            <nav className="px-2 w-screen  sm:h-full h-screen bg-white   flex justify-between sm:items-center ">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
                     <div className="bg-white rounded-lg shadow-white lg: lg:overflow-x-hidden lg:overflow-y-auto sm:p-7 p-1 m-2  text-black">
 
