@@ -46,18 +46,18 @@ export default function Registration() {
 
   return (
     <div 
-      className="h-screen w-full  flex items-center justify-center  flex-col"
+      className="h-screen w-full bg-white flex items-center justify-center  flex-col "
     >
-       <video 
-              src={Video} 
-              controls 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="w-[100px] sm:w-[300px] sm:h-[300px] lg:w-[400px] sm:ml-52 lg:h-[230px] lg:m-0  rounded-xl shadow-lg"
-            />
-      <div className="text-2xl text-white text-center font-semibold mt-6 drop-shadow-lg">
+       <video
+                             src={Video}
+                             controls
+                             autoPlay
+                             loop
+                             muted
+                             playsInline
+                             className="w-[100px]  sm:w-[200px] sm:h-[200px] rounded-[50%]  lg:w-[200px] lg:h-[200px]  lg:rounded-[50%] lg:ml-2   shadow-lg"
+                           />
+      <div className="text-2xl text-black text-center font-semibold mt-6 drop-shadow-lg">
           Registration
         </div>
       <form
@@ -74,7 +74,7 @@ export default function Registration() {
           <input
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  capitalize mb-4 border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
+            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  capitalize mb-4 border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Enter your name"
           />
         </div>
@@ -85,7 +85,7 @@ export default function Registration() {
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="rounded-4xl  focus:border-blue-500   py-3.5 p-3  border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full mb-3 hover:border-blue-500 outline-none "
+            className="rounded-4xl  focus:border-blue-500   py-3.5 p-3  border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full mb-3 hover:border-blue-500 outline-none "
             placeholder="Enter your email"
           />
         </div>
@@ -96,7 +96,7 @@ export default function Registration() {
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full mb-1 hover:border-blue-500 outline-none "
+            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full mb-1 hover:border-blue-500 outline-none "
             placeholder="Enter password"
           />
           {passwordError && <p className="text-red-300 text-sm">{passwordError}</p>}
@@ -108,7 +108,7 @@ export default function Registration() {
           <input
             onChange={(e) => setConfirm(e.target.value)}
             type="password"
-            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-100 border-b text-white placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
+            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Re-enter password"
           />
           {confirmError && <p className="text-red-300 text-sm">{confirmError}</p>}
@@ -125,7 +125,7 @@ export default function Registration() {
         </button>
 
        
-        <div className="flex flex-row m-4 text-gray-300 text-lg font-medium">
+        <div className="flex flex-row m-4 text-gray-800 text-lg font-medium">
           <span>Already have an account?</span>
           <Link to="/login" className="text-blue-400 pl-2 text-lg font-medium hover:text-blue-800">
             Login

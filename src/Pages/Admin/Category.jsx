@@ -28,7 +28,7 @@ export default function Category() {
     fetch("/public/sample_d1.xlsx")
       .then((res) => res.arrayBuffer())
       .then((buffer) => {
-        const workbook = XLSX.read(buffer,{ type:"array"});
+        const workbook = XLSX.read(buffer, { type: "array" });
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
 
@@ -42,36 +42,35 @@ export default function Category() {
   }, []);
 
   return (
-       <div>
+    <div>
 
-      <nav className="px-2 w-full bg-black h-screen">
+      <nav className="px-2 w-full bg-white">
         <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
-          <div className="bg-black rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7 text-white">
+          <div className="bg-white rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7 text-black">
 
-            <div className="overflow-hidden">
+            <div className="overflow-hidden ">
               <Link to="/">
-              <video 
-                                                      src={Video} 
-                                                      controls 
-                                                      autoPlay 
-                                                      loop 
-                                                      muted 
-                                                      playsInline
-                                                      className=" sm:w-[200px] sm:h-[300px] lg:w-[200px] sm:ml-52 lg:h-[230px] lg:m-0 lg:block sm:hidden  hidden h-screen
-                                                       rounded-xl shadow-lg"
-                                                    />
+                <video
+                  src={Video}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-[100px]  sm:w-[200px] sm:h-[200px] rounded-[50%] lg:block lg:w-[200px] lg:h-[200px] sm:ml-72  lg:rounded-[50%] lg:ml-8 lg:mr-4 hidden   shadow-lg"
+                />
                 {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
               </Link>
 
 
-              <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-400 lg:mt-[30px] ">
+              <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-700 lg:mt-[30px] ">
                 <li>
-                  <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
+                  <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black   lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
                     <i class="fa-solid fa-chart-line"></i>Sale
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
+                  <Link to="/dash" className=" transition-colors duration-300 ease-in  hover:text-black   lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5 ">
                     <i class="fa-solid fa-grip"></i>Dashboard
                   </Link>
                 </li>
@@ -79,7 +78,7 @@ export default function Category() {
                   {/* Configuration Button */}
                   <div
                     onClick={() => setShowLink(!showLink)}
-                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black  lg:px-10 lg:py-2"
                   >
                     <i className="fa-solid fa-screwdriver-wrench"></i>
                     <span>Configuration</span>
@@ -91,7 +90,7 @@ export default function Category() {
                       <li className=''>
                         <Link
                           to="/Server"
-                          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                          className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                         >
                           ⋆Service
                         </Link>
@@ -99,7 +98,7 @@ export default function Category() {
                       <li>
                         <Link
                           to="/machine"
-                          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                          className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                         >
                           ⋆Machine
                         </Link>
@@ -107,7 +106,7 @@ export default function Category() {
                       <li>
                         <Link
                           to="/log"
-                          className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                          className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                         >
                           ⋆Logs
                         </Link>
@@ -115,16 +114,16 @@ export default function Category() {
                     </ul>
                   )}
                 </li>
-                                                <li>
-                                                    <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                                        <i class="fa-solid fa-fax"></i>Machine Inventory
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black  lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
-                                                       <i class="fa-solid fa-icons"></i>Category
-                                                    </Link>
-                                                </li>
+                <li>
+                  <Link to="/mach" className="  transition-colors duration-300 ease-in  hover:text-black   lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                    <i class="fa-solid fa-fax"></i>Machine Inventory
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/cat" className="  transition-colors duration-300 ease-in  hover:text-black   lg:hover:w-full hover:rounded-lg lg:px-10 lg:py-3.5">
+                    <i class="fa-solid fa-icons"></i>Category
+                  </Link>
+                </li>
 
 
               </ul>
@@ -132,63 +131,63 @@ export default function Category() {
 
 
             <button
-              className="block text-2xl lg:hidden lg:w-0 lg:h-0 text-white"
+              className="block text-2xl lg:hidden lg:w-0 lg:h-0 text-black"
               onClick={() => setOpen(!open)}
             >
               ☰
             </button>
           </div>
-          <div>
-            <div className='text-2xl text-white font-semibold text-left p-3.5 '>
+          <div >
+            <div className='text-2xl text-black font-semibold text-left p-3.5 '>
               Category
             </div>
-            <div className='p-1.5 bg-black text-white shadow  sm:p-12'>
+            <div className='p-1.5 bg-white text-black shadow  sm:p-12'>
               <div className='flex justify-between items-center sm:flex '>
-                <input type='search' className=' p-1 border-[1px] w-1/2 border-gray-200 placeholder:p-1 rounded-md' placeholder='Search' />
-                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-white'>
+                <input type='search' className=' p-1 border-b-[1px] w-1/2 border-gray-400 placeholder:p-1 focus:border-2 focus:border-blue-400 rounded-2xl' placeholder='Search' />
+                <div className='border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-black'>
                   + New Category
                 </div>
               </div>
-              
-    
-    <div className="p-6">
-      {data.length > 0 && (
-        <div className="overflow-x-auto">
-          <table className="table-auto border-collapse  w-full">
-            <thead className="bg-black text-white">
-              <tr>
-              
-                {columns.map((col, index) => (
-                  <th key={index} className=" px-4 py-2 sm:text-2xl">
-                    {col}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((row, i) => (
-                <tr key={i}>
-                
-                  {columns.map((col, j) => (
-                    <td key={j} className=" px-4 py-2 text-center   sm:px-16">
-                      {row[col]}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </div>
-     </div>
 
+
+              <div className="p-6">
+                {data.length > 0 && (
+                  <div className="overflow-x-auto">
+                    <table className="table-auto border-collapse  w-full">
+                      <thead className="bg-white text-black">
+                        <tr>
+
+                          {columns.map((col, index) => (
+                            <th key={index} className=" px-4 py-2 sm:text-2xl">
+                              {col}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {data.map((row, i) => (
+                          <tr key={i}>
+
+                            {columns.map((col, j) => (
+                              <td key={j} className=" px-4 py-2 text-center   sm:px-16">
+                                {row[col]}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
             </div>
-          
+
+          </div>
+
 
           <div>
 
-          <div>
+            <div>
             </div>
             <button
               onClick={handleLogout}
@@ -202,8 +201,8 @@ export default function Category() {
               />
             </button>
           </div>
-        
-</div>
+
+        </div>
 
         {open && (
 
@@ -272,4 +271,4 @@ export default function Category() {
   )
 }
 
- 
+

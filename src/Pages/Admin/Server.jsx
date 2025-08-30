@@ -27,27 +27,26 @@ export default function Server() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-black flex justify-between items-center overflow-hidden  h-screen">
+            <nav className="px-2 w-full bg-white flex justify-between items-center overflow-hidden  h-screen">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
-                    <div className="bg-black text-white rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
+                    <div className="bg-white text-black rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
 
                         <div className="">
                             <Link to="/">
-                            <video 
-                                                                    src={Video} 
-                                                                    controls 
-                                                                    autoPlay 
-                                                                    loop 
-                                                                    muted 
-                                                                    playsInline
-                                                                    className=" sm:w-[200px] sm:h-[300px] lg:w-[200px] sm:ml-52 lg:h-[230px] lg:m-0 lg:block sm:hidden  hidden h-screen
-                                                                     rounded-xl shadow-lg"
-                                                                  />
+                                <video
+                                    src={Video}
+                                    controls
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-[100px]  sm:w-[200px] sm:h-[200px] rounded-[50%] lg:block lg:w-[200px] lg:h-[200px] sm:ml-72  lg:rounded-[50%] lg:ml-8 lg:mr-4 hidden   shadow-lg"
+                                />
                                 {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
                             </Link>
 
 
-                            <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-400 lg:mt-[30px] ">
+                            <ul className="hidden lg:flex lg:flex-col gap-8 text-lg font-medium text-gray-700 lg:mt-[30px] ">
                                 <li>
                                     <Link to="/sale" className="transition-colors duration-300 ease-in  hover:rounded-lg hover:text-black  lg:hover:w-full lg:px-10  lg:py-3.5 hover:">
                                         <i class="fa-solid fa-chart-line"></i>Sale
@@ -115,7 +114,7 @@ export default function Server() {
 
 
                         <button
-                            className="block text-4xl lg:hidden lg:w-0 lg:h-0 mb-32"
+                            className="block text-4xl text-black lg:hidden lg:w-0 lg:h-0 mb-11"
                             onClick={() => setOpen(!open)}
                         >
                             ☰
@@ -123,7 +122,7 @@ export default function Server() {
                     </div>
                     {/* content for sale */}
 
-                    <div className='m-14'>
+                    <div className='m-10'>
                         <img src={gif} className='rounded-md' />
                     </div>
                     <div>

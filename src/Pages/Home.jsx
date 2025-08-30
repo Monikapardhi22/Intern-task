@@ -1,5 +1,6 @@
 import React from 'react'
 import rose from '../assets/rose.png'
+import Video from "../assets/Black White Bold Simple Initials Name Logo.mp4"
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -12,14 +13,23 @@ export default function Home() {
   };
 
   return (
-    <div className='text-center sm:w-[100%] h-screen w-full flex items-center justify-center sm:flex sm:flex-col'>
+    <div className='text-center bg-white sm:w-[100%] h-screen w-full flex items-center justify-center sm:flex sm:flex-col'>
       <div className='sm:flex sm:flex-col sm:justify-center sm:items-center '>
+        <video
+                                     src={Video}
+                                     controls
+                                     autoPlay
+                                     loop
+                                     muted
+                                     playsInline
+                                     className="w-[100px]  sm:w-[200px] sm:h-[200px] mb-10 rounded-[50%]  lg:w-[200px] lg:h-[200px]  lg:rounded-[50%] lg:ml-2   shadow-lg"
+                                   />
 
         <div className='flex md:flex-col sm:flex-col lg:flex-col justify-center items-center'>
             <img src={rose} className='w-7'/>
             
         </div>
-        <h1 className='text-4xl  text-white font-bold'>
+        <h1 className='text-4xl  text-black font-bold'>
             Welcome, <div className='capitalize'>
               {user?.name}
             </div>

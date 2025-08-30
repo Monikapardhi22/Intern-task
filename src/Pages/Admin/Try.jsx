@@ -23,11 +23,11 @@ export default function Try() {
     }, []);
 
     return (
-        <div className="w-full relative bg-black text-white" ref={dropdownRef}>
+        <div className="w-full relative  text-white" ref={dropdownRef}>
             {/* Dropdown header */}
             <div
                 onClick={() => setOpen(!open)}
-                className="border p-2.5 text-white mb-4 rounded-md shadow cursor-pointer bg-black text-2xl font-semibold"
+                className="border p-2.5 text-black mb-4 rounded-md shadow cursor-pointer bg-white text-2xl font-semibold"
             >
                 Transaction
             </div>
@@ -41,7 +41,7 @@ export default function Try() {
                         <input
                             type="text"
                             placeholder="Search..."
-                            className="w-1/2 p-2 m-2 border rounded-md focus:outline-none"
+                            className="w-1/2 p-2 m-2 border rounded-md focus:outline-none text-black"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
@@ -176,7 +176,7 @@ export default function Try() {
                                     </td>
                                 </tr>
                             </tbody>
-                             <div className="gap-7 flex justify-center items-center p-3.5">
+                             <div className="gap-7 flex justify-center items-center p-3.5 text-black">
 
                         <div className="w-[100px]">
                             Rows per Page :</div> 
