@@ -310,11 +310,11 @@ export default function Sale() {
                                 </div>
 
                             </div>
-                            <div className='m-5'>
+                            <div className='m-5 '>
                                 <div className='text-2xl font-semibold text-black'>
                                     Business Analysis
                                 </div>
-                                <div className='flex  sm:flex sm:flex-wrap mt-3.5  lg:ml-5  flex-col '>
+                                <div className='flex  sm:flex sm:flex-wrap sm:flex-row mt-3.5  lg:ml-5  flex-col '>
                                     <div className='border-[1.2px] border-gray-400 p-2.5 rounded-md mb-2.5 mt-2.5 mr-2.5'>
                                         <div className='text-[16px]  text-gray-600'>
                                             Transaction amount/number of transactions
@@ -386,8 +386,8 @@ export default function Sale() {
                                                     <td className='sm:flex  sm:justify-center sm:items-center flex justify-center items-center'>
                                                         <img src={razo} className='w-[50px] h-[40px]' />Razorpay
                                                     </td>
-                                                    <td className='sm:pl-64'>0</td>
-                                                    <td className='sm:pl-28 '
+                                                    <td className='sm:pr-32'>0</td>
+                                                    <td className='sm:pr-32'
                                                     >0</td>
                                                 </tr>
                                             </tbody>
