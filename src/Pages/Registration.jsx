@@ -46,7 +46,7 @@ export default function Registration() {
 
   return (
     <div 
-      className="h-screen w-full bg-white flex items-center justify-center  flex-col "
+      className="h-screen w-full bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center  flex-col "
     >
        <video
                              src={Video}
@@ -57,14 +57,14 @@ export default function Registration() {
                              playsInline
                              className="w-[100px]  sm:w-[200px] sm:h-[200px] rounded-[50%]  lg:w-[200px] lg:h-[200px]  lg:rounded-[50%] lg:ml-2   shadow-lg"
                            />
-      <div className="text-2xl text-black text-center font-semibold mt-6 drop-shadow-lg">
+      <div className="text-2xl text-black text-center font-semibold mt-2.5 drop-shadow-lg">
           Registration
         </div>
       <form
         onSubmit={handleRegister}
         className="flex flex-col   justify-center items-center  
             p-6 sm:p-8 w-[90%] max-w-md
-          shadow-black/30"
+          shadow-black/30 bg-white rounded-lg mt-1.5" 
       >
         
 
@@ -74,7 +74,7 @@ export default function Registration() {
           <input
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  capitalize mb-4 border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
+            className="rounded-md focus:border-blue-500   py-3.5 p-3  capitalize mb-4 border-gray-700 border text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Enter your name"
           />
         </div>
@@ -85,7 +85,7 @@ export default function Registration() {
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="rounded-4xl  focus:border-blue-500   py-3.5 p-3  border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full mb-3 hover:border-blue-500 outline-none "
+            className="rounded-md  focus:border-blue-500   py-3.5 p-3  border-gray-700 border text-black placeholder-gray-400 placeholder:text-lg w-full mb-3 hover:border-blue-500 outline-none "
             placeholder="Enter your email"
           />
         </div>
@@ -96,7 +96,7 @@ export default function Registration() {
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full mb-1 hover:border-blue-500 outline-none "
+            className="rounded-md focus:border-blue-500   py-3.5 p-3  border-gray-700 border text-black placeholder-gray-400 placeholder:text-lg w-full mb-1 hover:border-blue-500 outline-none "
             placeholder="Enter password"
           />
           {passwordError && <p className="text-red-300 text-sm">{passwordError}</p>}
@@ -108,7 +108,7 @@ export default function Registration() {
           <input
             onChange={(e) => setConfirm(e.target.value)}
             type="password"
-            className="rounded-4xl focus:border-blue-500   py-3.5 p-3  border-gray-700 border-b text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
+            className="rounded-md focus:border-blue-500   py-3.5 p-3  border-gray-700 border text-black placeholder-gray-400 placeholder:text-lg w-full hover:border-blue-500 outline-none  "
             placeholder="Re-enter password"
           />
           {confirmError && <p className="text-red-300 text-sm">{confirmError}</p>}
@@ -119,7 +119,7 @@ export default function Registration() {
 
      
         <button
-          className="sm:w-[380px] md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-300 mt-5 rounded-3xl text-[17px]   text-shadow-lg font-semibold text-gray-100 hover:bg-blue-700 hover:border-blue-500 outline-none  hover:text-white transition"
+          className="sm:w-[380px] w-[250px]  md:w-[360px] shadow-lg px-2.5 py-2.5 p-6 bg-blue-400 mt-5 rounded-md text-[17px]   text-shadow-lg font-semibold text-gray-100 hover:bg-blue-700 hover:border-blue-500 outline-none  hover:text-white transition"
         >
           Register
         </button>

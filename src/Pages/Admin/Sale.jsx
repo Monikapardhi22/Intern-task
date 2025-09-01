@@ -1,7 +1,7 @@
 import React from 'react'
 import Admin from '../Admin'
 import { useState } from "react";
-import sales from '../../assets/cilent.avif'
+import sales from '../../assets/saless.png'
 import { motion } from 'motion/react';
 import { Link, useNavigate } from "react-router-dom";
 // import logo from "../../assets/logo.png";
@@ -127,7 +127,7 @@ export default function Sale() {
                                 </h1>
 
                             </div>
-                            <div className='border-b-2 bg-[#ede6e0] border-gray-100 text-white shadow-lg rounded-2xl sm:flex sm:items-center sm:justify-around flex justify-center items-center  '>
+                            <div className='border-b-2  border-gray-100 text-white shadow-lg rounded-2xl sm:flex sm:items-center sm:justify-around flex justify-center items-center  '>
                                 <div className='m-5 mr-12' >
                                     <select className='border text-black border-gray-700 hover:border-2 hover:border-blue-600 p-3 focus:border-blue-600 rounded-lg sm:w-[300px] py-3 '  >
                                         <option value="" className='disabled hidden font-bold text-5xl'>
