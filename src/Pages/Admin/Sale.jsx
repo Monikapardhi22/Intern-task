@@ -374,7 +374,7 @@ export default function Sale() {
                                     </div>
                                     <div className=' ' >
                                         <table className='sm:w-full p-3.5 lg:w-[1000px] w-full mt-3   ' >
-                                            <thead className='bg-blue-100 text-[16px] w-full rounded-md  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
+                                            <thead className=' text-[16px] w-full rounded-md  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
                                                 <tr>
                                                     <th>Name </th>
                                                     <th>Amount</th>
