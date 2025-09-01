@@ -17,7 +17,7 @@ export default function Home() {
       <div className='sm:flex sm:flex-col sm:justify-center sm:items-center '>
         <video
                                      src={Video}
-                                     controls
+                                    //  controls
                                      autoPlay
                                      loop
                                      muted

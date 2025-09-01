@@ -44,7 +44,7 @@ export default function Category() {
   return (
     <div>
 
-      <nav className="px-2  bg-white h-screen w-screen">
+      <nav className="px-2 bg-gradient-to-br from-blue-50 via-white to-blue-100 h-screen w-screen">
         <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
           <div className="bg-white rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7 text-black">
 
@@ -52,7 +52,7 @@ export default function Category() {
               <Link to="/">
                 <video
                   src={Video}
-                  controls
+                  // controls
                   autoPlay
                   loop
                   muted
@@ -92,7 +92,7 @@ export default function Category() {
                           to="/Server"
                           className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                         >
-                          ⋆Service
+                          <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
                         </Link>
                       </li>
                       <li>
@@ -100,7 +100,7 @@ export default function Category() {
                           to="/machine"
                           className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                         >
-                          ⋆Machine
+                          <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
                         </Link>
                       </li>
                       <li>
@@ -108,7 +108,7 @@ export default function Category() {
                           to="/log"
                           className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                         >
-                          ⋆Logs
+                          <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
                         </Link>
                       </li>
                     </ul>
@@ -141,11 +141,11 @@ export default function Category() {
             <div className='text-2xl text-black font-semibold text-left p-3.5 '>
               Category
             </div>
-            <div className='p-1.5 bg-white text-black shadow  sm:p-12'>
+            <div className='p-1.5 bg-gradient-to-br from-blue-50 via-white to-blue-100 text-black shadow-lg  sm:p-12 mt-5'>
               <div className='flex justify-between items-center sm:flex '>
-                <input type='search' className=' p-1 border-b-[1px] w-1/2 border-gray-400 placeholder:p-1 focus:border-2 focus:border-blue-400 rounded-2xl' placeholder='Search' />
+                <input type='search' className=' p-1 border w-1/2 border-gray-400 placeholder:p-1 focus:border-2 focus:border-blue-400 rounded-md' placeholder='Search' />
                 <button
-                  className="border-0 p-1 text-lg bg-blue-400 sm:w-1/5 w-1/4 text-center rounded-md sm:m-2.5 text-white hover:bg-blue-600"
+                  className="border p-1 text-lg bg-blue-400 sm:w-1/5  text-center rounded-md sm:m-2.5 text-white hover:bg-blue-600"
                 >
                   + New Category
                 </button>
@@ -153,15 +153,15 @@ export default function Category() {
               </div>
 
 
-              <div className="p-6">
+              <div className="p-6 mt-7">
                 {data.length > 0 && (
                   <div className="overflow-x-auto">
                     <table className="table-auto border-collapse  w-full">
-                      <thead className="bg-white text-black">
+                      <thead className="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-black">
                         <tr>
 
                           {columns.map((col, index) => (
-                            <th key={index} className=" px-4 py-2 sm:text-2xl">
+                            <th key={index} className=" px-6 py-2 sm:text-2xl">
                               {col}
                             </th>
                           ))}
@@ -172,7 +172,7 @@ export default function Category() {
                           <tr key={i}>
 
                             {columns.map((col, j) => (
-                              <td key={j} className=" px-4 py-2 text-center   sm:px-16">
+                              <td key={j} className=" px-6 py-2 text-center   sm:px-16">
                                 {row[col]}
                               </td>
                             ))}
@@ -222,21 +222,47 @@ export default function Category() {
                 </Link>
               </li>
 
-              <li>
-                <Link to="/server" onClick={() => setOpen(false)}>
-                  ⋆Server
-                </Link>
+              <li className="cursor-pointer">
+                {/* Configuration Button */}
+                <div
+                  onClick={() => setShowLink(!showLink)}
+                  className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                >
+                  <i className="fa-solid fa-screwdriver-wrench"></i>
+                  <span>Configuration</span>
+                </div>
+
+                {/* Dropdown Links */}
+                {showLink && (
+                  <ul className=" text-gray-600 mt-2 lg:px-12 space-y-2">
+                    <li className=''>
+                      <Link
+                        to="/Server"
+                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                      >
+                        <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/machine"
+                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                      >
+                        <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/log"
+                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                      >
+                        <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
-              <li>
-                <Link to="/machine" onClick={() => setOpen(false)}>
-                  ⋆Machine
-                </Link>
-              </li>
-              <li>
-                <Link to="/log" onClick={() => setOpen(false)}>
-                  ⋆Logs
-                </Link>
-              </li>
+
               <li>
                 <Link to="/cat" onClick={() => setOpen(false)}>
                   <i className="fa-solid fa-icons"></i>Category

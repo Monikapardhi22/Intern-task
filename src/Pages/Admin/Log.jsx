@@ -22,15 +22,15 @@ export default function Log() {
     return (
         <div>
 
-            <nav className="px-2 w-screen  sm:h-full h-screen bg-white   flex justify-between sm:items-center ">
+            <nav className="px-2 w-screen  sm:h-full h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100   lg:flex lg:justify-between lg:sm:items-center ">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
-                    <div className="bg-white rounded-lg shadow-white lg: lg:overflow-x-hidden lg:overflow-y-auto sm:p-7 p-1 m-2  text-black">
+                    <div className="bg-gradient-to-br mt-3 from-blue-50 via-white to-blue-100 rounded-lg shadow-white lg: lg:overflow-x-hidden lg:overflow-y-auto sm:p-7 p-1 m-2  text-black">
 
                         <div className="">
                             <Link to="/">
                                 <video
                                     src={Video}
-                                    controls
+                                    // controls
                                     autoPlay
                                     loop
                                     muted
@@ -71,7 +71,7 @@ export default function Log() {
                                                     to="/Server"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Service
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
                                                 </Link>
                                             </li>
                                             <li>
@@ -79,7 +79,7 @@ export default function Log() {
                                                     to="/machine"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Machine
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
                                                 </Link>
                                             </li>
                                             <li>
@@ -87,7 +87,7 @@ export default function Log() {
                                                     to="/log"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Logs
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
                                                 </Link>
                                             </li>
                                         </ul>
@@ -117,33 +117,33 @@ export default function Log() {
 
                     {/* content for sale */}
 
-                    <div className='ml-14 mr-14 mb-14 lg:mt-20 sm:w-[750px]'>
-                        <div className='  sm:block text-4xl  text-black mt-20 font-semibold mb-5  sm:mt-8 sm:m-7'>
+                    <div className='sm:ml-14 sm:mr-14 sm:mb-14 lg:mt-20 sm:w-[750px]'>
+                        <div className=' ml-3.5 sm:block text-2xl  text-black mt-20 font-semibold mb-5  sm:mt-8 sm:m-7'>
                             Logs
                         </div>
-                        <div className='bg-transparent shadow-lg p-2 sm:p-7 rounded-md  '>
+                        <div className='mt-14 sm:p-7 border border-white shadow-lg rounded-2xl m-3  p-1 pt-4 bg-white '>
                             <div className='flex justify-center items-center'>
-                                <div className='sm:m-3 flex flex-col'>
-                                    <input type='text' placeholder='Machine Code' className='border-b-[1px] border-gray-700  shadow-lg bg-white text-black w-[110px] ml-2.5 sm:w-[200px] sm:text-[18px] placeholder:text-gray-500   sm:p-4 p-1 rounded-md  focus:border-blue-400 focus:outline-none ' />
-                                    <button className='text-xl border-[1px]  border-gray-600 rounded-md text-blue-400 sm:p-2 sm:mt-3 ml-4 mr-9 sm:w-1/2   focus:bg-blue-300 focus:text-black focus:border-blue-300 focus:transition-colors focus:duration-300 focus:ease-in-out cursor-pointer mt-1'>Show</button>
+                                <div className='sm:m-3 flex  justify-between items-center'>
+                                    <input type='text' placeholder='Machine Code' className='border-[1px] border-gray-700 p-1.5  shadow-lg bg-white text-black w-[180px] ml-2.5 sm:w-[200px] sm:text-[18px] placeholder:text-gray-500   sm:p-4  rounded-md  focus:border-blue-400 focus:outline-none ' />
+                                    <button className='text-xl border-[1px] p-1 text-white bg-blue-500  border-gray-600 rounded-md sm:p-2 sm:mt-3 ml-2.5  sm:w-1/2   focus:bg-blue-300 focus:text-black focus:border-blue-300 focus:transition-colors focus:duration-300 focus:ease-in-out cursor-pointer mt-1'>Show</button>
                                 </div>
                                 <div>
                                     {/* <img src={vending} className='sm:h-full sm:w-full h-[200px] w-[100px]' /> */}
                                 </div>
                             </div>
                             <div className='sm:m-3 mt-6 flex m-3 sm:flex-row text-black  flex-col sm:justify-center sm:items-center justify-center items-center'>
-                                Date:  <input type='date' placeholder='Date' className='border-b-2 border-gray-300 font-light text-black rounded-md p-1 m-1 placeholder:text-white' />
+                                Date:  <input type='date' placeholder='Date' className='border-2 border-gray-300 font-light text-black rounded-md p-1 m-1 placeholder:text-white' />
                                 Time:<input
                                     type="time"
-                                    className="text-[18px] text-white sm:p-1 p-1 rounded-md border-b-2 border-gray-200 focus:border-blue-400 focus:outline-none sm:ml-8 m-1  "
+                                    className="text-[18px] text-white sm:p-1 p-1 rounded-md border-2 border-gray-200 focus:border-blue-400 focus:outline-none sm:ml-8 m-1  "
                                 />
                                 <button className='text-lg border-b-[1px] border-gray-300 rounded-md text-white  sm:ml-24 p-1 bg-blue-500 px-4 focus:bg-blue-900 focus:text-white focus:border-blue-300 focus:transition-colors focus:duration-300 focus:ease-in-out cursor-pointer sm:m-0 mt-1 ml-2.5'>Filter</button>
 
                             </div>
 
                         </div>
-                        <div className='w-full bg-transparent shadow text-[19px] text-center text-white mt-2.5 rounded-md'>
-                            <div className='p-2.5'> <select className='bg-transparent text-blue-400'>
+                        <div className='w-full rounded-md bg-transparent shadow-lg text-[19px] text-center text-white mt-2.5'>
+                            <div className='p-2.5'> <select className='bg-transparent text-black'>
                                 <option value="">Click Here</option>
                                 <option value=" Available">No History Available !!</option>
                             </select></div>
@@ -186,21 +186,47 @@ export default function Log() {
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link to="/server" onClick={() => setOpen(false)}>
-                                    ⋆Server
-                                </Link>
+                            <li className="cursor-pointer">
+                                {/* Configuration Button */}
+                                <div
+                                    onClick={() => setShowLink(!showLink)}
+                                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                                >
+                                    <i className="fa-solid fa-screwdriver-wrench"></i>
+                                    <span>Configuration</span>
+                                </div>
+
+                                {/* Dropdown Links */}
+                                {showLink && (
+                                    <ul className=" text-gray-600 mt-2 lg:px-12 space-y-2">
+                                        <li className=''>
+                                            <Link
+                                                to="/Server"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/machine"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/log"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
                             </li>
-                            <li>
-                                <Link to="/machine" onClick={() => setOpen(false)}>
-                                    ⋆Machine
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/log" onClick={() => setOpen(false)}>
-                                    ⋆Logs
-                                </Link>
-                            </li>
+
                             <li>
                                 <Link to="/cat" onClick={() => setOpen(false)}>
                                     <i className="fa-solid fa-icons"></i>Category

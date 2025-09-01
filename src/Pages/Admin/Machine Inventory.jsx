@@ -38,11 +38,11 @@ export default function Dashboard() {
   return (
     <div>
 
-      <nav className="px-2 w-full bg-white overflow-y-hidden overflow-x-auto">
+      <nav className="px-2 w-full  bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-y-hidden overflow-x-auto">
         <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
-          <div className="bg-white text-black rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7">
+          <div className=" bg-gradient-to-br from-blue-50 via-white to-blue-100 text-black sm:rounded-lg sm:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto p-7 py-11">
 
-            <div className="overflow-hidden">
+            <div className="">
               <Link to="/">
                 <video
                   src={Video}
@@ -86,7 +86,7 @@ export default function Dashboard() {
                           to="/Server"
                           className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                         >
-                          ⋆Service
+                          <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
                         </Link>
                       </li>
                       <li>
@@ -94,7 +94,7 @@ export default function Dashboard() {
                           to="/machine"
                           className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                         >
-                          ⋆Machine
+                          <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
                         </Link>
                       </li>
                       <li>
@@ -102,7 +102,7 @@ export default function Dashboard() {
                           to="/log"
                           className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                         >
-                          ⋆Logs
+                          <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
                         </Link>
                       </li>
                     </ul>
@@ -130,59 +130,68 @@ export default function Dashboard() {
               ☰
             </button>
           </div>
-          <div className='sm:mt-[100px] '>
+          <div className='sm:mt-[20px] '>
             <div className='text-2xl  font-semibold text-left p-3.5 text-black'>
               Machine Inventory
             </div>
-            <div className='p-3 bg-white shadow sm:px-16'>
+            <div className='p-3  bg-white shadow sm:px-16'>
               <div className='flex justify-between items-center '>
-                <input type='search' className=' p-1 border-b-[1px]  w-1/2 border-gray-400 placeholder:p-1 placeholder:text-gray-400 rounded-md' placeholder='Search' />
-                <div className='border-0 p-1 text-lg text-white bg-blue-400 sm:w-1/5 w-1/3 text-center rounded-md sm:m-2.5'>
+                <input type='search' className=' p-1 border-[1px]  w-1/2 border-gray-400 placeholder:p-1 placeholder:text-gray-400 rounded-md' placeholder='Search' />
+                <div className='border-0 p-0 text-lg text-white bg-blue-400 sm:w-1/5 w-1/3 text-center rounded-md sm:m-2.5'>
                   +New Inventory
                 </div>
+
+              </div>
+              <div className='flex justify-between items-center mt-1.5 '>
+                <input type='search' className=' p-1 border-[1px]  w-1/2 border-gray-400 placeholder:p-1 placeholder:text-gray-400 rounded-md' placeholder='Machine ID / Serial No. ' />
+                <div className='border-0 p-1 text-lg text-white bg-blue-400 sm:w-1/5 w-1/3 text-center rounded-md sm:m-2.5'>
+                  Machine
+                </div>
+
               </div>
 
-              <div className='flex  justify-center items-center flex-col sm:flex lg:flex lg:flex-row  sm:justify-center sm:items-center'>
+
+              <div className='flex flex-row  flex-wrap justify-center items-center  sm:flex lg:flex lg:flex-row  sm:justify-center sm:items-center'>
                 <img src={gif1} height="200px" width="300px" className='rounded-md mt-3' />
-                <div className='border-[1px] border-blue-500 sm:p-7  w-1/4 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
+                <div className='border-[1px] border-blue-500 sm:p-7 m-1 w-1/4 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
                   Rented <div className='flex justify-center items-center mt-3.5 text-2xl'>
-                    0   <img src={layer} className='h-[30px] ml-2' />
+                    0   <img src={layer} className='h-[30px] ml-2 cursor-pointer' />
                   </div>
                 </div>
-                <div className='border-[1px] border-blue-500 w-1/4 sm:p-7  h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
+                <div className='border-[1px] border-blue-500 m-1 w-1/4 sm:p-7  h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
                   Sold <div className='flex justify-center items-center mt-3.5 text-2xl'>
-                    0   <img src={singlelayer} className='h-[30px] ml-2' />
+                    0   <img src={singlelayer} className='h-[30px] ml-2 cursor-pointer' />
                   </div>
                 </div>
-                <div className='border-[1px] border-blue-500  sm:p-7 w-1/4 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
+                <div className='m-1 border-[1px] border-blue-500  sm:p-7 w-1/4 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
                   Applied <div className='flex justify-center items-center mt-3.5 text-2xl'>
-                    1  <img src={layer} className='h-[30px] ml-2' />
+                    1  <img src={layer} className='h-[30px] ml-2 cursor-pointer' />
                   </div>
                 </div>
-                <div className='border-[1px] border-blue-500 w-1/4  sm:p-7 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
+                <div className='  m-1 border-[1px] border-blue-500 w-1/4  sm:p-7 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
                   Franchise <div className='flex justify-center items-center mt-3.5 text-2xl'>
-                    0   <img src={singlelayer} className='h-[30px] ml-2' />
+                    0   <img src={singlelayer} className='h-[30px] ml-2 cursor-pointer' />
                   </div>
                 </div>
-                <div className='border-[1px] border-blue-500  w-1/4 sm:p-7 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
+                <div className='m-1 border-[1px] border-blue-500  w-1/4 sm:p-7 h-[100px] bg-violet-50 text-xl sm:w-1/7  text-blue-400 font-semibold rounded-xl  flex flex-col justify-center items-center'>
                   Total <div className='flex justify-center items-center mt-3.5 text-2xl'>
-                    1  <img src={layer} className='h-[30px] ml-2' />
+                    1  <img src={layer} className='h-[30px] ml-2 cursor-pointer' />
                   </div>
                 </div>
               </div>
 
               <div>
-                <div className="p-2">
+                <div className="p-2 rounded-md bg-gradient-to-br from-blue-50 via-white to-blue-100 m-2.5">
                   {/* <h2 className="text-2xl font-bold mb-4">📊 Excel Data (Auto Load)</h2> */}
 
                   {data.length > 0 && (
                     <div className="overflow-x-auto">
                       <table className="table-auto border-collapse  w-full">
-                        <thead className="bg-white">
+                        <thead className=" bg-gradient-to-br from-blue-50 via-white to-blue-100">
                           <tr>
                             {/* <th className="border border-gray-400 px-4 py-2">Sr.No</th> */}
                             {columns.map((col, index) => (
-                              <th key={index} className=" sm:text-2xl px-1 py-2 text-black bg-white">
+                              <th key={index} className=" sm:text-2xl px-2 py-2 rounded-md text-black bg-white">
                                 {col}
                               </th>
                             ))}
@@ -243,21 +252,47 @@ export default function Dashboard() {
                 </Link>
               </li>
 
-              <li>
-                <Link to="/server" onClick={() => setOpen(false)}>
-                  ⋆Server
-                </Link>
+              <li className="cursor-pointer">
+                {/* Configuration Button */}
+                <div
+                  onClick={() => setShowLink(!showLink)}
+                  className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                >
+                  <i className="fa-solid fa-screwdriver-wrench"></i>
+                  <span>Configuration</span>
+                </div>
+
+                {/* Dropdown Links */}
+                {showLink && (
+                  <ul className=" text-gray-600 mt-2 lg:px-12 space-y-2">
+                    <li className=''>
+                      <Link
+                        to="/Server"
+                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                      >
+                        <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/machine"
+                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                      >
+                        <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/log"
+                        className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                      >
+                        <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
-              <li>
-                <Link to="/machine" onClick={() => setOpen(false)}>
-                  ⋆Machine
-                </Link>
-              </li>
-              <li>
-                <Link to="/log" onClick={() => setOpen(false)}>
-                  ⋆Logs
-                </Link>
-              </li>
+
               <li>
                 <Link to="/cat" onClick={() => setOpen(false)}>
                   <i className="fa-solid fa-icons"></i>Category

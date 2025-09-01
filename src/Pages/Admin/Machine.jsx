@@ -27,15 +27,15 @@ export default function Machine() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-white h-screen flex justify-between items-center ">
+            <nav className="px-2 w-full bg-gradient-to-br from-blue-50 via-white to-blue-100 h-screen lg:flex lg:justify-between lg:items-center ">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
-                    <div className="bg-white text-black rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
+                    <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-black rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7 ">
 
                         <div className="">
                             <Link to="/">
                                 <video
                                     src={Video}
-                                    controls
+                                    // controls
                                     autoPlay
                                     loop
                                     muted
@@ -76,7 +76,7 @@ export default function Machine() {
                                                     to="/Server"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Service
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
                                                 </Link>
                                             </li>
                                             <li>
@@ -84,7 +84,7 @@ export default function Machine() {
                                                     to="/machine"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Machine
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
                                                 </Link>
                                             </li>
                                             <li>
@@ -92,7 +92,7 @@ export default function Machine() {
                                                     to="/log"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Logs
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
                                                 </Link>
                                             </li>
                                         </ul>
@@ -157,21 +157,47 @@ export default function Machine() {
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link to="/server" onClick={() => setOpen(false)}>
-                                    ⋆Server
-                                </Link>
+                            <li className="cursor-pointer">
+                                {/* Configuration Button */}
+                                <div
+                                    onClick={() => setShowLink(!showLink)}
+                                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                                >
+                                    <i className="fa-solid fa-screwdriver-wrench"></i>
+                                    <span>Configuration</span>
+                                </div>
+
+                                {/* Dropdown Links */}
+                                {showLink && (
+                                    <ul className=" text-gray-600 mt-2 lg:px-12 space-y-2">
+                                        <li className=''>
+                                            <Link
+                                                to="/Server"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/machine"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/log"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
                             </li>
-                            <li>
-                                <Link to="/machine" onClick={() => setOpen(false)}>
-                                    ⋆Machine
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/log" onClick={() => setOpen(false)}>
-                                    ⋆Logs
-                                </Link>
-                            </li>
+
 
 
                             <li>

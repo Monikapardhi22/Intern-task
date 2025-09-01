@@ -1,7 +1,7 @@
 import React from 'react'
 import Admin from '../Admin'
 import { useState } from "react";
-import sales from '../../assets/saless.png'
+import sales from '../../assets/cilent.avif'
 import { motion } from 'motion/react';
 import { Link, useNavigate } from "react-router-dom";
 // import logo from "../../assets/logo.png";
@@ -26,15 +26,15 @@ export default function Sale() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-white overflow-hidden">
+            <nav className="px-2 w-full  bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
                 <div className="lg:flex lg: lg: lg:flex-row sm:flex sm:flex-col ">
-                    <div className="bg-white text-black rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7  ">
+                    <div className=" bg-gradient-to-br from-blue-50 via-white to-blue-100 text-black rounded-lg lg:shadow lg: lg:overflow-x-hidden lg:overflow-y-auto p-7  ">
 
                         <div className="">
                             <Link to="/">
                                 <video
                                     src={Video}
-                                    controls
+                                    // controls
                                     autoPlay
                                     loop
                                     muted
@@ -74,7 +74,7 @@ export default function Sale() {
                                                     to="/Server"
                                                     className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                                                 >
-                                                    ⋆Service
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
                                                 </Link>
                                             </li>
                                             <li>
@@ -82,7 +82,7 @@ export default function Sale() {
                                                     to="/machine"
                                                     className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                                                 >
-                                                    ⋆Machine
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
                                                 </Link>
                                             </li>
                                             <li>
@@ -90,7 +90,7 @@ export default function Sale() {
                                                     to="/log"
                                                     className="block transition-colors duration-300 ease-in hover:text-black  hover:rounded-lg"
                                                 >
-                                                    ⋆Logs
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
                                                 </Link>
                                             </li>
                                         </ul>
@@ -119,18 +119,19 @@ export default function Sale() {
                     </div>
                     {/* content for sale */}
                     <div className='   lg:w-[1100px] '>
-                        <div className=' sm:ml-56 lg:ml-0  sm:mt-9 lg:mt-0 sm:overflow-hidden lg:overflow-hidden'>
+                        <div className=' sm:ml-56 lg:ml-0 sm:mt-9 lg:mt-0 sm:overflow-hidden lg:overflow-hidden'>
                             <div className=''>
+                                <div> </div>
                                 <h1 className='text-xl  font-semibold lg:text-3xl m-2.5'>
                                     Sales
                                 </h1>
 
                             </div>
-                            <div className='border-b-2 border-gray-100 text-white shadow-lg rounded-2xl sm:flex sm:items-center sm:justify-around flex justify-center items-center  '>
+                            <div className='border-b-2 bg-[#ede6e0] border-gray-100 text-white shadow-lg rounded-2xl sm:flex sm:items-center sm:justify-around flex justify-center items-center  '>
                                 <div className='m-5 mr-12' >
-                                    <select className='border-b-2 text-black border-gray-700 hover:border-2 hover:border-blue-600 p-3 focus:border-blue-600 rounded-lg sm:w-[300px] py-3 '  >
-                                        <option value="" className='disabled hidden text-5xl'>
-                                            Select Option
+                                    <select className='border text-black border-gray-700 hover:border-2 hover:border-blue-600 p-3 focus:border-blue-600 rounded-lg sm:w-[300px] py-3 '  >
+                                        <option value="" className='disabled hidden font-bold text-5xl'>
+                                        Choose Machine
                                         </option>
                                         <option value="*" className='text-lg' >All</option>
                                         <option value="cloud" className='text-lg'>Cloud</option>
@@ -152,14 +153,14 @@ export default function Sale() {
                             </div>
                             <div className='border-b-2 border-gray-300 shadow-md rounded-md mt-4 sm:flex sm:justify-around sm:items-center flex justify-between items-center '>
                                 <div>
-                                    <input
+                                    Date :<input
                                         type="date"
                                         name='date' placeholder='Date'
-                                        className="border-b-2 text-black border-gray-300 sm:p-2 sm:px-9 m-5 p-2 focus:border-blue-500 focus:border-b-2  hover:border-blue-600 rounded-lg"
+                                        className="border text-black border-gray-300 sm:p-2 sm:px-9 m-5 p-2 focus:border-blue-500 focus:border-b-2  hover:border-blue-600 rounded-lg"
                                     />
 
                                 </div>
-                                <div className='border-b-2 border-gray-300 text-black sm:p-2 sm:px-9 p-2 sm:m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
+                                <div className='border border-gray-300 text-black sm:p-2 sm:px-9 p-2 sm:m-5 focus:border-blue-500 hover:border-blue-600 rounded-lg'>
                                     <select
 
 
@@ -192,13 +193,13 @@ export default function Sale() {
                                                 style={{ transformStyle: "preserve-3d" }}
                                             >
 
-                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
+                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-200 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
                                                     <img src={layer} className='w-14 mr-5 p-1.5' /> Sale of Cloud
                                                 </div>
 
 
                                                 <div
-                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-500  font-bold rounded-xl backface-hidden"
+                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-200  font-bold rounded-xl backface-hidden"
                                                     style={{ transform: "rotateY(180deg)" }}
                                                 > <div className='flex flex-row'>
                                                         <img src={layer} className='w-14 mr-2 p-1.5' />
@@ -222,7 +223,7 @@ export default function Sale() {
                                                 style={{ transformStyle: "preserve-3d" }}
                                             >
 
-                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
+                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-200 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
                                                     <img src={layer} className='w-14 mr-10 p-1.5' /><div className='mr-6 p-1.5'>
                                                         STPTS
                                                     </div>
@@ -230,7 +231,7 @@ export default function Sale() {
 
 
                                                 <div
-                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-500  font-bold rounded-xl backface-hidden"
+                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-200  font-bold rounded-xl backface-hidden"
                                                     style={{ transform: "rotateY(180deg)" }}
                                                 > <div className='flex flex-row'>
                                                         <img src={layer} className='w-14 mr-2 p-1.5 ' />
@@ -252,7 +253,7 @@ export default function Sale() {
                                                 style={{ transformStyle: "preserve-3d" }}
                                             >
 
-                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
+                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-200 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
                                                     <img src={layer} className='w-14 mr-5 p-1.5' /><div className='mr-6'>
                                                         VendT3
                                                     </div>
@@ -260,7 +261,7 @@ export default function Sale() {
 
 
                                                 <div
-                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-500  font-bold rounded-xl backface-hidden"
+                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-200  font-bold rounded-xl backface-hidden"
                                                     style={{ transform: "rotateY(180deg)" }}
                                                 > <div className='flex flex-row'>
                                                         <img src={layer} className='w-14 mr-2 p-1.5' />
@@ -284,7 +285,7 @@ export default function Sale() {
                                                 style={{ transformStyle: "preserve-3d" }}
                                             >
 
-                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-400 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
+                                                <div className="absolute  flex  pt-7 items-center overflow-hidden justify-center bg-gradient-to-b from-blue-200 to-white  pl-3.5 text-black text-2xl font-bold rounded-xl ">
                                                     <img src={layer} className='w-14 mr-3.5 p-1.5' />
                                                     <div className='mr-4'>
                                                         Cosmetic
@@ -293,7 +294,7 @@ export default function Sale() {
 
 
                                                 <div
-                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-500  font-bold rounded-xl backface-hidden"
+                                                    className="absolute pt-4 w-full h-full flex items-center overflow-hidden justify-center  text-black text-2xl  bg-gradient-to-b from-white to-blue-200  font-bold rounded-xl backface-hidden"
                                                     style={{ transform: "rotateY(180deg)" }}
                                                 > <div className='flex flex-row'>
                                                         <img src={layer} className='w-14 mr-2 ' />
@@ -367,20 +368,20 @@ export default function Sale() {
                                 <div>
                                     <img src={chart} />
                                 </div>
-                                <div className=' border rounded-md mt-4 text-black flex  flex-col justify-around items-center shadow-lg border-white '>
+                                <div className=' bg-gradient-to-br from-blue-50 via-white to-blue-100 border rounded-md mt-4 text-black flex  flex-col justify-around items-center shadow-lg border-white '>
                                     <div className='text-2xl font-semibold'>
                                         Top Payment Method
                                     </div>
                                     <div className=' ' >
-                                        <table className='sm:w-full lg:w-[1000px] mt-3   ' >
-                                            <thead className='bg-blue-400 text-[16px]  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
+                                        <table className='sm:w-full p-3.5 lg:w-[1000px] w-full mt-3   ' >
+                                            <thead className='bg-blue-100 text-[16px] w-full rounded-md  text-lg border-0  font-semibold h-[40px] mb-3 m-1.5'>
                                                 <tr>
                                                     <th>Name </th>
                                                     <th>Amount</th>
                                                     <th>Transactions</th>
                                                 </tr>
                                             </thead>
-                                            <tbody className='sm:w-full lg:w-full text-center  '>
+                                            <tbody className='sm:w-full p-3 lg:w-full text-center  '>
                                                 <tr>
                                                     <td className='sm:flex  sm:justify-center sm:items-center flex justify-center items-center'>
                                                         <img src={razo} className='w-[50px] h-[40px]' />Razorpay
@@ -446,21 +447,47 @@ export default function Sale() {
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link to="/server" onClick={() => setOpen(false)}>
-                                    ⋆Server
-                                </Link>
+                            <li className="cursor-pointer">
+                                {/* Configuration Button */}
+                                <div
+                                    onClick={() => setShowLink(!showLink)}
+                                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                                >
+                                    <i className="fa-solid fa-screwdriver-wrench"></i>
+                                    <span>Configuration</span>
+                                </div>
+
+                                {/* Dropdown Links */}
+                                {showLink && (
+                                    <ul className=" text-gray-600 mt-2 lg:px-12 space-y-2">
+                                        <li className=''>
+                                            <Link
+                                                to="/Server"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/machine"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/log"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
                             </li>
-                            <li>
-                                <Link to="/machine" onClick={() => setOpen(false)}>
-                                    ⋆Machine
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/log" onClick={() => setOpen(false)}>
-                                    ⋆Logs
-                                </Link>
-                            </li>
+
 
                             <li>
                                 <Link to="/cat" onClick={() => setOpen(false)} className='hover:text-black '>

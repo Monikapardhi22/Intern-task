@@ -50,7 +50,7 @@ export default function Registration() {
     >
        <video
                              src={Video}
-                             controls
+                            //  controls
                              autoPlay
                              loop
                              muted

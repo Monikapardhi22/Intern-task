@@ -24,16 +24,16 @@ export default function Dashboard() {
     return (
         <div>
 
-            <nav className="px-2 w-full bg-white overflow-hidden">
+            <nav className="px-2 w-full bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
                 <div className="lg:flex lg:items-center lg:justify-between lg:flex-row sm:flex sm:flex-col">
-                    <div className="bg-white text-black rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto sm:p-7 py-7 px-2 ">
+                    <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-black rounded-lg lg:shadow lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto sm:p-7 py-7 px-2  ">
 
                         <div className="overflow-hidden">
                             <Link to="/">
                                 {/* <img src={logo} alt="Logo" className="h-[180px] w-[200px] sm:hidden lg:block lg:h-[200px] lg:w-[200px] hidden" /> */}
                                 <video
                                     src={Video}
-                                    controls
+                                    // controls
                                     autoPlay
                                     loop
                                     muted
@@ -72,7 +72,7 @@ export default function Dashboard() {
                                                     to="/Server"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Service
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
                                                 </Link>
                                             </li>
                                             <li>
@@ -80,7 +80,7 @@ export default function Dashboard() {
                                                     to="/machine"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Machine
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
                                                 </Link>
                                             </li>
                                             <li>
@@ -88,7 +88,7 @@ export default function Dashboard() {
                                                     to="/log"
                                                     className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
                                                 >
-                                                    ⋆Logs
+                                                    <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
                                                 </Link>
                                             </li>
                                         </ul>
@@ -123,52 +123,49 @@ export default function Dashboard() {
 
                             <div className='lg:flex lg:flex-row lg:justify-center lg:items-center flex flex-col items-center justify-center'>
 
-                                <div className='flex justify-center items-center  lg:mr-16 border-white shadow-lg w-[200px] lg:w-[400px] rounded-2xl sm:m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 overflow-hidden lg:m-0 bg-white mt-24'>
+                                <div className='flex justify-center items-center  bg-gradient-to-br from-blue-50 via-white to-blue-100  lg:mr-16 border-white shadow-lg w-[300px] lg:w-[400px] rounded-2xl sm:m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 overflow-hidden lg:m-0 bg-white mt-24'>
                                     <div className='font-bold text-2xl '>
                                         All Products
-                                        <div className='mt-3.5'>
-                                            17
-                                        </div>
+                                        <br />
+
+                                        17
+
                                     </div>
                                     <div>
-                                        <img src={product} className='sm:w-[120px] sm:h-[120px] cursor-pointer' />
+                                        <img src={product} className='sm:w-[120px] sm:h-[120px] w-[100px] cursor-pointer' />
                                     </div>
                                 </div>
-                                <div className='flex justify-center items-center  border-amber-50 shadow-lg w-[200px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40  lg:m-0 bg-white'>
+                                <div className='flex justify-center items-center  bg-gradient-to-br from-blue-50 via-white to-blue-100 border-amber-50 shadow-lg w-[300px] lg:w-[400px] rounded-2xl m-5 hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40  lg:m-0 bg-white'>
                                     <div className='font-bold text-2xl'>
                                         All Clients
-                                        <div className='mt-3.5'>
-                                            3
-                                        </div>
+                                        <br /> 3
                                     </div>
                                     <div>
-                                        <img src={client} className='sm:w-[120px] sm:h-[120px]  cursor-pointer ' />
+                                        <img src={client} className='sm:w-[120px] sm:h-[120px] w-[100px]  cursor-pointer ' />
                                     </div>
                                 </div>
                             </div>
                             <div className='flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-center lg:items-center'>
 
 
-                                <div className='flex justify-center items-center sm:py-4 border-white shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0 bg-white'>
+                                <div className='flex justify-center items-center sm:py-4 border-white  bg-gradient-to-br from-blue-50 via-white to-blue-100 shadow-lg w-[300px] lg:w-[400px] lg:mt-3 rounded-2xl m-5  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0 bg-white'>
                                     <div className='font-bold text-2xl'>
                                         All Orders
-                                        <div className='mt-3.5'>
-                                            1200
-                                        </div>
+                                        <br />
+                                        1200
                                     </div>
                                     <div>
-                                        <img src={order} className='sm:w-[100px] sm:h-[100px] ml-3 cursor-pointer sm:ml-5 w-[70px] h-[90px]' />
+                                        <img src={order} className='sm:w-[100px] sm:h-[100px] w-[100px] ml-3 cursor-pointer sm:ml-5  ' />
                                     </div>
                                 </div>
-                                <div className='flex justify-center items-center sm:py-4 lg:ml-16 border-amber-50 shadow-lg w-[200px] lg:w-[400px] lg:mt-3 rounded-2xl m-5 mb-28  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0 bg-white'>
+                                <div className='flex justify-center items-center  bg-gradient-to-br from-blue-50 via-white to-blue-100 sm:py-4 lg:ml-16 border-amber-50 shadow-lg w-[300px] lg:w-[400px] h-[100px] lg:mt-3 rounded-2xl m-5 mb-28  hover:bg-blue-300 hover:border-blue-400 hover:shadow-lg p-0.5 sm:ml-40 lg:m-0 bg-white'>
                                     <div className='font-bold text-2xl '>
                                         All Machine
-                                        <div className='mt-3.5'>
-                                            1000
-                                        </div>
+                                        <br />
+                                        1000
                                     </div>
                                     <div>
-                                        <img src={machine} className='sm:w-[100px] sm:h-[100px] cursor-pointer sm:ml-5 ' />
+                                        <img src={machine} className='sm:w-[100px] sm:h-[100px] w-[100px] cursor-pointer sm:ml-5 ' />
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +191,7 @@ export default function Dashboard() {
 
                 {open && (
 
-                    <div className="absolute top-20 left-5 sm:mb-3 lg:hidden lg:mt-3 bg-white rounded-lg shadow p-4 sm:w-[170px] z-10 sm:h-[580px]">
+                    <div className="absolute top-20 left-5 sm:mb-3 lg:hidden lg:mt-3 bg-gradient-to-br from-blue-50 via-white to-blue-100 rounded-lg shadow p-4 sm:w-[170px] z-10 sm:h-[580px]">
                         <ul className="flex flex-col gap-4 text-base font-semibold text-gray-600 ">
                             <li>
                                 <Link to="/sale" onClick={() => setOpen(false)} className='hover:text-black '>
@@ -206,8 +203,48 @@ export default function Dashboard() {
                                     <i className="fa-solid fa-grip"></i>Dashboard
                                 </Link>
                             </li>
+                            <li className="cursor-pointer">
+                                {/* Configuration Button */}
+                                <div
+                                    onClick={() => setShowLink(!showLink)}
+                                    className="flex items-center gap-2 transition-colors duration-300 ease-in hover:text-black lg:px-10 lg:py-2"
+                                >
+                                    <i className="fa-solid fa-screwdriver-wrench"></i>
+                                    <span>Configuration</span>
+                                </div>
 
-                            <li>
+                                {/* Dropdown Links */}
+                                {showLink && (
+                                    <ul className=" text-gray-600 mt-2 lg:px-12 space-y-2">
+                                        <li className=''>
+                                            <Link
+                                                to="/Server"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Service
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/machine"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Machine
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/log"
+                                                className="block transition-colors duration-300 ease-in hover:text-black hover:rounded-lg"
+                                            >
+                                                <i className="fa-sharp-duotone fa-solid fa-circle-right"></i>Logs
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
+                            </li>
+
+                            {/* <li>
                                 <Link to="/server" onClick={() => setOpen(false)} className='hover:text-black '>
                                     ⋆Server
                                 </Link>
@@ -221,7 +258,7 @@ export default function Dashboard() {
                                 <Link to="/log" onClick={() => setOpen(false)} className='hover:text-black '>
                                     ⋆Logs
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link to="/cat" onClick={() => setOpen(false)} className='hover:text-black '>
                                     <i className="fa-solid fa-icons"></i>Category
